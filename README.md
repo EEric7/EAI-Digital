@@ -1,4 +1,4 @@
-# Freelance Portfolio - Blazor
+# Freelance Portfolio EAI Digital - Blazor
 
 Site vitrine freelance moderne développé avec **Blazor Web App** et **ASP.NET Core (.NET 8)**.
 
