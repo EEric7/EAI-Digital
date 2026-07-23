@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+:root {
+  --brand-teal: #64a19d;
+  --brand-teal-dark: #4f817d;
+  --brand-ink: #0f1115;
+  --brand-ink-soft: #191c21;
+  --brand-cloud: #f8f9fa;
+  --brand-muted: #6c757d;
+  --brand-border: #e5e7eb;
+  --brand-focus: rgba(100, 161, 157, 0.35);
+  --surface-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: #212529;
+  background: #ffffff;
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+a {
+  color: var(--brand-teal);
+}
+
+a:hover,
+a:focus {
+  color: var(--brand-teal-dark);
+}
+
+main {
+  display: block;
+}
+
+.container,
+.container-fluid {
+  width: 100%;
+}
+
+/* Layout defaults */
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-word;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+  color: #fff;
+  background-color: var(--brand-teal-dark);
+  border-color: var(--brand-teal-dark);
+}
+
+.border-top {
+  border-top: 1px solid var(--brand-border) !important;
+}
+
+.border-bottom {
+  border-bottom: 1px solid var(--brand-border) !important;
+}
+
+.box-shadow {
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+.footer {
+  padding: 2rem 0;
+  color: #8a8f98;
+  line-height: 1.4;
+}
+
+/* Global section rhythm */
+.about-section,
+.projects-section,
+.signup-section,
+.contact-section {
+  position: relative;
+}
+
+/* Main navigation (portfolio) */
+#mainNav {
+  min-height: 3.5rem;
+  background-color: transparent;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#mainNav .navbar-toggler {
+  font-size: 0.9rem;
+  padding: 0.75rem;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+}
+
+#mainNav .navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem var(--brand-focus);
+}
+
+#mainNav .navbar-brand {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+}
+
+#mainNav .nav-link {
+  color: rgba(255, 255, 255, 0.78);
+  transition: color 0.2s ease;
+}
+
+#mainNav .nav-link:hover,
+#mainNav .nav-link:focus {
+  color: #ffffff;
+}
+
+#mainNav .nav-link.active {
+  color: var(--brand-teal) !important;
+}
+
+#mainNav.navbar-shrink {
+  background-color: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+#mainNav.navbar-shrink .navbar-brand {
+  color: #1f2937;
+}
+
+#mainNav.navbar-shrink .nav-link {
+  color: #4b5563;
+}
+
+#mainNav.navbar-shrink .nav-link:hover,
+#mainNav.navbar-shrink .nav-link:focus {
+  color: #111827;
+}
+
+#mainNav.navbar-shrink .navbar-toggler {
+  color: #374151;
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Hero */
+.masthead {
+  width: 100%;
+  min-height: 35rem;
+  padding: 12rem 0 8rem;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.78) 76%, #000 100%),
+    url("../assets/img/masthead.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.masthead h1,
+.masthead .h1 {
+  margin-bottom: 1.25rem;
+  font-family: "Varela Round", "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: clamp(2.2rem, 5.6vw, 6.25rem);
+  line-height: 1.05;
+  letter-spacing: 0.35rem;
+  text-transform: uppercase;
+  background: linear-gradient(rgba(255, 255, 255, 0.98), rgba(255, 255, 255, 0.2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.masthead h2,
+.masthead .h2 {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+}
+
+/* About */
+.about-section {
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+  background: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.92) 72%, rgba(0, 0, 0, 0.82) 100%);
+}
+
+.about-section p {
+  margin-bottom: 3rem;
+}
+
+/* Skills + projects */
+.projects-section {
+  padding: 7rem 0;
+  background-color: var(--brand-cloud);
+}
+
+.projects-section .featured-text {
+  padding: 1rem 0;
+}
+
+.projects-section .project {
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: var(--surface-shadow);
+}
+
+.projects-section .project-text {
+  padding: 2rem;
+  font-size: 0.95rem;
+}
+
+.projects-section .project-text hr {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Progress bars */
+.progressbar-title {
+  margin: 0.75rem 0 0.4rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.progress {
+  position: relative;
+  height: 1.15rem;
+  border-radius: 999px;
+  background-color: #e9eef3;
+  overflow: visible;
+  margin-bottom: 1.25rem;
+}
+
+.progress .progress-bar {
+  position: relative;
+  border-radius: 999px;
+  min-width: 2.25rem;
+  transition: width 0.35s ease;
+}
+
+.progress-value {
+  position: absolute;
+  right: 0.45rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.72rem;
+  color: #ffffff;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+
+.progress-icon {
+  position: absolute;
+  right: 0.25rem;
+  top: -0.45rem;
+  width: 0;
+  height: 0;
+  border-left: 0.33rem solid transparent;
+  border-right: 0.33rem solid transparent;
+  border-bottom: 0.42rem solid currentColor;
+}
+
+/* Credits section */
+.signup-section {
+  padding: 8rem 0;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.62) 72%, #000 100%),
+    url("../assets/img/Workstation.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Contact */
+.contact-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.contact-section .card {
+  border: 0;
+  border-bottom: 0.25rem solid var(--brand-teal);
+  box-shadow: var(--surface-shadow);
+}
+
+.contact-section .card h4,
+.contact-section .card .h4 {
+  font-family: "Varela Round", "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12rem;
+}
+
+.contact-section .card hr {
+  width: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: var(--brand-teal);
+  border-width: 0.24rem;
+  opacity: 1;
+}
+
+.contact-section .social {
+  margin-top: 3.5rem;
+}
+
+.contact-section .social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  line-height: 1;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.48);
+  background: rgba(255, 255, 255, 0.1);
+  transition: transform 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.contact-section .social a:hover,
+.contact-section .social a:focus {
+  transform: translateY(-2px);
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.error-section {
+  padding: 20rem 0;
+  background-image:
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.18) 0%, rgba(0, 0, 0, 0.58) 100%),
+    url("../assets/img/ErrorPage.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Extra custom utilities */
+.experience-focus {
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.12), 0 6px 12px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(13, 110, 253, 0.25);
+  transform: translateY(-2px);
+}
+
+.related-projects .card {
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (min-width: 992px) {
+  .masthead {
+    min-height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid var(--brand-teal);
+  }
+
+  .projects-section .project-text {
+    padding: 4rem;
+  }
+
+  #mainNav {
+    padding: 0.75rem 0;
+  }
+
+  #mainNav .nav-link {
+    padding: 0 1rem;
+  }
+}
+
+@media (max-width: 991.98px) {
+  #mainNav {
+    background-color: #111827;
+  }
+
+  #mainNav .navbar-collapse {
+    margin-top: 0.75rem;
+  }
+
+  .masthead h1,
+  .masthead .h1 {
+    letter-spacing: 0.2rem;
+  }
+
+  .projects-section {
+    padding: 5.5rem 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .masthead {
+    min-height: 30rem;
+    padding-top: 9rem;
+    padding-bottom: 6rem;
+  }
+
+  .progress {
+    height: 1.05rem;
+  }
+
+  .progress-value {
+    font-size: 0.66rem;
+  }
+}
