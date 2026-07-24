@@ -1,5 +1,6 @@
-/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/appsettings.Development.json
-/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/appsettings.json
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/Properties/appsettings.Development.json
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/Properties/appsettings.Production.json
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/Properties/appsettings.Staging.json
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/PortfolioDigital.Web.staticwebassets.runtime.json
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/PortfolioDigital.Web
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/PortfolioDigital.Web.deps.json
@@ -29,5 +30,3 @@
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/PortfolioDigital.Web.pdb
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/PortfolioDigital.Web.genruntimeconfig.cache
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/ref/PortfolioDigital.Web.dll
-/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/appsettings.Production.json
-/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/appsettings.Staging.json

@@ -34,36 +34,23 @@ namespace PortfolioDigital.Web.Models
                     Category = UIDataText.SkillLevels[i, 2]
                 });
             }
-            
-            ProjectModelDisplay.Add(new ProjectModel
-            {
-                Title = UIDataText.ProjectInformation[0, 0],
-                Description = UIDataText.ProjectInformation[0, 1],
-                Position = UIDataText.ProjectInformation[0, 2],
-                StartDate = new DateOnly(2018, 9, 1),
-                EndDate = new DateOnly(2021, 9, 1),
-                ImageUrl = UIDataText.ProjectInformation[0, 3]
-            });
 
-            ProjectModelDisplay.Add(new ProjectModel
+            for (int i = 0; i < UIDataText.ProjectInformation.GetLength(0); i++)
             {
-                Title = UIDataText.ProjectInformation[1, 0],
-                Description = UIDataText.ProjectInformation[1, 1],
-                Position = UIDataText.ProjectInformation[1, 2],
-                StartDate = new DateOnly(2022, 3, 1),
-                EndDate = new DateOnly(2023, 2, 1),
-                ImageUrl = UIDataText.ProjectInformation[1, 3]
-            });
-
-            ProjectModelDisplay.Add(new ProjectModel
-            {
-                Title = UIDataText.ProjectInformation[2, 0],
-                Description = UIDataText.ProjectInformation[2, 1],
-                Position = UIDataText.ProjectInformation[2, 2],
-                StartDate = new DateOnly(2023, 4, 1),
-                EndDate = new DateOnly(2024, 4, 1),
-                ImageUrl = UIDataText.ProjectInformation[2, 3]
-            });
+                ProjectModelDisplay.Add(new ProjectModel
+                {
+                    Title = UIDataText.ProjectInformation[i, 0],
+                    Description = UIDataText.ProjectInformation[i, 1],
+                    Position = UIDataText.ProjectInformation[i, 2],
+                    ImageUrl = UIDataText.ProjectInformation[i, 3],
+                    StartDate = DateOnly.Parse(UIDataText.ProjectInformation[i, 4]),
+                    EndDate = DateOnly.Parse(UIDataText.ProjectInformation[i, 5]),
+                    Company = UIDataText.ProjectInformation[i, 6],
+                    Location = UIDataText.ProjectInformation[i, 7],
+                    Technologies = UIDataText.ProjectInformation[i, 8].Split('/'),
+                    Missions = UIDataText.ProjectsMissions[i]
+                });
+            }
         }
     }
 }

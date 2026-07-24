@@ -30,8 +30,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_CardProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19DYXJkUHJvamVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_Menu.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19NZW51LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_ProgressbarSkills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Qcm9ncmVzc2JhclNraWxscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_ValidationScriptsPartial.cshtml]

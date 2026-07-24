@@ -1,5 +1,11 @@
 var builder = WebApplication.CreateBuilder(args);
 
+var environment = builder.Environment.EnvironmentName;
+
+builder.Configuration
+    .SetBasePath(Path.Combine(builder.Environment.ContentRootPath, "Properties"))
+    .AddJsonFile($"appsettings.{environment}.json", optional: false, reloadOnChange: true);
+
 builder.WebHost.ConfigureKestrel(options =>
 {
     options.AddServerHeader = false;
@@ -36,7 +42,6 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error");
     app.UseHsts();
 }
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 app.UseRouting();

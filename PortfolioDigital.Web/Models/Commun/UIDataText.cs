@@ -24,25 +24,89 @@ namespace PortfolioDigital.Web.Models.Commun
         // Skill Information
         public static readonly string[,] SkillLevels = new string[11, 3]
         {
-            { "C#", "Advanced", "Languages" },
-            { ".NET Core", "Advanced", "Frameworks" },
-            { "ASP.NET Core", "Advanced", "Frameworks" },
-            { "Entity Framework Core", "Advanced", "Frameworks" },
-            { "SQL Server", "Intermediate", "Languages" },
-            { "xUnit", "Intermediate", "Frameworks" },
+            { "C#", "Advanced", "Language" },
+            { ".NET Core", "Advanced", "Framework" },
+            { "ASP.NET Core", "Advanced", "Framework" },
+            { "Entity Framework Core", "Advanced", "Framework" },
+            { "SQL Server", "Intermediate", "Language" },
+            { "xUnit", "Intermediate", "Framework" },
             { "Agiles développement & Scrum", "Advanced", "Design" },
             { "Testing & Debugging", "Intermediate", "Design" },
             { "SOLID Principales", "Advanced", "Design" },
-            { "HTML5/CSS3", "Advanced", "Languages" },
+            { "HTML5/CSS3", "Advanced", "Language" },
             { "Git", "Advanced", "Version Control" }
         };
 
         // Project Information
-        public static readonly string[,] ProjectInformation = new string[3,4]
+        public static readonly string[,] ProjectInformation = new string[3,9]
         {
-            { "Service de gestion d'impression encoder", "Pilotage de projets clients de la phase d’analyse jusqu’au déploiement des solutions informatiques. Rédaction de cahiers des charges fonctionnels et techniques, développement, test et mise en production d’applications, participation à la gestion et à l’évolution du système d’information de l’entreprise.", "Apprentis manager en systèmes d'information", "assets/img/PID.jpg" },
-            { "Signature électronique", "Participation à l’étude de faisabilité technique pour l’intégration de partenaires tiers, à la planification et au suivi des projets, ainsi qu’au développement de nouvelles fonctionnalités web services. Montée en compétence sur les technologies, processus métier, audite et outils internes de l’entreprise.", "Conseiller It", "assets/img/Wacken2.jpg"},
-            { "Web Service de déploiement cognitif", "Participation à l’analyse des besoins d’évolution d’un web service de déploiement cognitif, à la modernisation de l’infrastructure pour une migration vers le cloud, ainsi qu’à la configuration des environnements de déploiement. Vérification de la compatibilité avec les normes et protocoles cloud et optimisation des performances du service après migration.", "Conseiller It", "assets/img/Wacken.jpg"}
+            { 
+                "Applicationde gestion d'impression encoder",
+                "Pilotage de projets clients de la phase d’analyse jusqu’au déploiement des solutions informatiques. Rédaction de cahiers des charges fonctionnels et techniques, développement, test et mise en production d’applications, participation à la gestion et à l’évolution du système d’information de l’entreprise.",
+                "Apprentis manager en systèmes d'information", 
+                "assets/img/PID.jpg",
+                "2018-09-01",
+                "2021-09-01",
+                "Paragon ID",
+                "Argent-sur-Sauldre",
+                "C#/WPF/XML/.NET 4.6/ASP.NET Core/Entity Framework Core/Microservices/Dapper/API REST/SQL Server"
+            },
+            { 
+                "Web Service Signature électronique",
+                "Participation à l’étude de faisabilité technique pour l’intégration de partenaires tiers, à la planification et au suivi des projets, ainsi qu’au développement de nouvelles fonctionnalités web services. Montée en compétence sur les technologies, processus métier, audite et outils internes de l’entreprise.",
+                "Conseiller It", 
+                "assets/img/Wacken2.jpg",
+                "2022-03-01",
+                "2023-02-01",
+                "Euro Information",
+                "Strasbourg",
+                "C#/.NET/ASP.NET Core/SQL Server/Dapper/API REST/Microservices/Visual Studio/Git."
+            },
+            { 
+                "Web Service de déploiement cognitif",
+                "Participation à l’analyse des besoins d’évolution d’un web service de déploiement cognitif, à la modernisation de l’infrastructure pour une migration vers le cloud, ainsi qu’à la configuration des environnements de déploiement. Vérification de la compatibilité avec les normes et protocoles cloud et optimisation des performances du service après migration.",
+                "Conseiller It", 
+                "assets/img/Wacken.jpg",
+                "2023-04-01",
+                "2024-04-01",
+                "Euro Information",
+                "Strasbourg",
+                "C#/.NET Core/ASP.NET Core/Entity Framework Core/SQL Server/API REST/Domain-Driven Design/Docker/Git/Visual Studio"
+            }
+        };
+
+        public static readonly IList<string[]> ProjectsMissions = new List<string[]>
+        {
+            new string[]
+            {
+                "Participation au développement et à l’évolution d’une application métier dédiée à la gestion de l’impression et de la personnalisation de cartes.",
+                "Analyse des besoins métiers et contribution à la conception des évolutions fonctionnelles.",
+                "Développement de nouvelles fonctionnalités et réalisation de la maintenance corrective et évolutive.",
+                "Intégration de périphériques d’impression et d’encodage de cartes.",
+                "Conception et exécution de tests fonctionnels afin de valider les développements.",
+                "Rédaction de documentation technique et de guides utilisateurs.",
+                "Collaboration avec les équipes projets, les consultants et les parties prenantes.",
+                "Veille technologique autour de l’écosystème .NET (ASP.NET Core MVC, WPF, WinForms, etc.)."
+            },
+            new string[]
+            {
+                "Contribution à l’évolution d’un service de signature utilisée dans un environnement bancaire.",
+                "Étude et Intégration d’un nouveau prestataire de signature électronique.",
+                "Analyse des besoins fonctionnels et techniques en collaboration avec les équipes métier.",
+                "Développement et optimisation des services et traitement de l’API.",
+                "Suivi du cycle de développement et coordination du projet.",
+                "Veilles technologies sur les processus et outils EI."
+            },
+            new string[]
+            {
+                "Refonte d’un service web permettant le déploiement des solutions cognitive du groupe.",
+                "Migration de l’application vers une infrastructure cloud privé afin d’améliorer la disponibilité et la maintenabilité.",
+                "Développement et adaptation des services REST aux nouveaux standards de l’infrastructure.",
+                "Participation à la configuration des environnements de deploiement.",
+                "Assurer de la compatibilité avec les normes et les protocoles du cloud spécifique.",
+                "Évolution et optimisation des performances après migration.",
+                "Maintenance et évolution et correction de la plateforme."
+            }
         };
     }
 }

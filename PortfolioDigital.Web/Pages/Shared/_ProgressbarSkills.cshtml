@@ -1,0 +1,53 @@
+@functions {
+    private static int ParseLevel(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return 0;
+
+        string str = value switch
+        {
+            "Beginner" => "25",
+            "Intermediate" => "50",
+            "Advanced" => "75",
+            "Expert" => "100",
+            _ => "0"
+        };
+
+        return int.TryParse(str, out var level)
+            ? Math.Clamp(level, 0, 100)
+            : 0;
+    }
+
+    private static string SetLevelBackgroundColor(string? Level)
+    {
+        string str = Level switch
+        {
+            "Beginner" => " #67c29c",
+            "Intermediate" => " #0d6efd",
+            "Advanced" => " #7464a1",
+            "Expert" => " #6610f2",
+            _ => "rgb(255, 255, 255)"
+        };
+        return str;
+    }
+}
+
+@foreach (var item in Model)
+{
+    var level = ParseLevel(item.Level);
+    var backgroundColor = @SetLevelBackgroundColor(item.Level);
+
+    <h3 class="progressbar-title">@item.Name</h3>
+    <div class="progress">
+        <div class="progress-bar"
+            role="progressbar"
+            aria-valuenow="@level"
+            aria-valuemin="0"
+            aria-valuemax="100";
+            style="width:@level%;
+            background:@backgroundColor;">
+            <span class="progress-value">@item.Level</span>
+            <span class="progress-icon" style="border-bottom-color:@backgroundColor;"></span>
+        </div>
+    </div>
+}

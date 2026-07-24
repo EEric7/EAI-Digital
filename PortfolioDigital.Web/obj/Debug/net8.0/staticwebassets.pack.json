@@ -37,6 +37,10 @@
       "PackagePath": "staticwebassets/assets/img/Workstation.jpg"
     },
     {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/github-logo.png",
+      "PackagePath": "staticwebassets/assets/img/github-logo.png"
+    },
+    {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/masthead.jpg",
       "PackagePath": "staticwebassets/assets/img/masthead.jpg"
     },
@@ -49,12 +53,24 @@
       "PackagePath": "staticwebassets/assets/img/skills.png"
     },
     {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/css/custom.css",
+      "PackagePath": "staticwebassets/css/custom.css"
+    },
+    {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/js/custom.js",
+      "PackagePath": "staticwebassets/js/custom.js"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/js/projects.js",
+      "PackagePath": "staticwebassets/js/projects.js"
     },
     {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/js/site.js",

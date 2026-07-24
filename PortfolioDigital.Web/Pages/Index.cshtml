@@ -2,34 +2,6 @@
 @using PortfolioDigital.Web.Models.Commun
 @model IndexModel
 
-<!--ToChange: Appliquer la régle SOLID sur ces fonctions.-->
-@functions {
-    private static int ParseLevel(string? value)
-    {
-        if (string.IsNullOrWhiteSpace(value))
-        {
-            return 0;
-        }
-
-        return int.TryParse(value.Trim().TrimEnd('%'), out var level)
-            ? Math.Clamp(level, 0, 100)
-            : 0;
-    }
-
-    private static string SetLevelBackgroundColor(string? Level)
-    {
-        string str = Level switch
-        {
-            "Beginner" => " #67c29c",
-            "Intermediate" => " #0d6efd",
-            "Advanced" => " #7464a1",
-            "Expert" => " #6610f2",
-            _ => "rgb(255, 255, 255)"
-        };
-        return str;
-    }
-}
-
 @{
     var home = Model.IndexHomeModel;
     var user = home?.UserModel;
@@ -43,17 +15,49 @@
 @await Html.PartialAsync("_Menu", home?.MenuModel)
 
 <!--Master Head-->
-<header class="masthead">
+<header class="masthead supernova-hero">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
-            <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">@user?.UserName</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">@user?.Profession</h2>
-                <a class="btn btn-primary" href="#about">@UIText.WhoAmIButton</a>
+            <div class="text-center supernova-content">
+                <h1 class="mx-auto my-0 text-uppercase supernova-title">@user?.UserName</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5 supernova-subtitle">@user?.Profession</h2>
+                <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+                    <a class="btn btn-primary" href="#about">@UIText.WhoAmIButton</a>
+                    <button type="button"
+                            class="btn btn-outline-light"
+                            data-bs-toggle="modal"
+                            data-bs-target="#introModal">
+                        Ouvrir une pop-up
+                    </button>
+                </div>
             </div>
         </div>
     </div>
+
 </header>
+
+<div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="introModalLabel">Exemple de pop-up Bootstrap</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body">
+                <p class="mb-3">
+                    Cette fenetre est ouverte directement depuis un bouton Razor avec
+                    <code>data-bs-toggle="modal"</code> et <code>data-bs-target="#introModal"</code>.
+                </p>
+                <p class="mb-0 text-muted">
+                    Tu peux reutiliser ce modele pour afficher un message, une confirmation ou des details dynamiques.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!--About-->
 <section class="about-section text-center" id="about">
@@ -71,7 +75,7 @@
 </section>
 
 <!-- Skills and projects-->
-<section class="projects-section bg-light" id="skills">
+<section class="projects-section bg-light section-Custom" id="skills">
     <div class="container px-4 px-lg-5">
         <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
             <div class="col-xl-8 col-lg-7">
@@ -82,49 +86,10 @@
                         <div class="container"></div>
                         <div class="row">
                             <div class="col-md-6">
-                                @foreach (var skill in skills.Where(s => s.Category == "Language"))
-                                {
-                                    var level = ParseLevel(skill.Level);
-                                    var backgroundColor = @SetLevelBackgroundColor(skill.Level);
-
-                                    <h3 class="progressbar-title">@skill.Name</h3>
-                                    <div class="progress">
-                                        <div class="progress-bar"
-                                            role="progressbar"
-                                            aria-valuenow="@level"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                            style="width:@level%; 
-                                            background:@backgroundColor;">
-                                            <span class="progress-value">@level%</span>
-                                            <span class="progress-icon"
-                                                style="border-bottom-color:
-                                                @backgroundColor;">
-                                            </span>
-                                        </div>
-                                    </div>
-                                }
+                                @await Html.PartialAsync("_ProgressbarSkills", skills.Where(s => s.Category == "Language"))
                             </div>
                             <div class="col-md-6">
-                                @foreach (var skill in skills.Where(s => s.Category == "Framework"))
-                                {
-                                    var level = ParseLevel(skill.Level);
-                                    var backgroundColor = @SetLevelBackgroundColor(skill.Level);
-
-                                    <h3 class="progressbar-title">@skill.Name</h3>
-                                    <div class="progress">
-                                        <div class="progress-bar"
-                                            role="progressbar"
-                                            aria-valuenow="@level"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                            style="width:@level%; 
-                                            background:@backgroundColor;">
-                                            <span class="progress-value">@level</span>
-                                            <span class="progress-icon" style="border-bottom-color:@backgroundColor;"></span>
-                                        </div>
-                                    </div>
-                                }
+                                @await Html.PartialAsync("_ProgressbarSkills", skills.Where(s => s.Category == "Framework"))
                             </div>
                         </div>
                     </div>
@@ -133,25 +98,7 @@
                         <div class="container"></div>
                         <div class="row">
                             <div class="col-md-6">
-                                @foreach (var skill in skills.Where(s => s.Category == "Design"))
-                                {
-                                    var level = ParseLevel(skill.Level);
-                                    var backgroundColor = @SetLevelBackgroundColor(skill.Level);
-                                    
-                                    <h3 class="progressbar-title">@skill.Name</h3>
-                                    <div class="progress">
-                                        <div class="progress-bar"
-                                            role="progressbar"
-                                            aria-valuenow="@level"
-                                            aria-valuemin="0"
-                                            aria-valuemax="100"
-                                            style="width:@level%; 
-                                            background:@backgroundColor;">
-                                            <span class="progress-value">@level</span>
-                                            <span class="progress-icon" style="border-bottom-color:@backgroundColor;"></span>
-                                        </div>
-                                    </div>
-                                }
+                                @await Html.PartialAsync("_ProgressbarSkills", skills.Where(s => s.Category == "Design" || s.Category == "Version Control"))
                             </div>
                         </div>
                     </div>
@@ -164,7 +111,6 @@
                         <img class="img-fluid" 
                             src="@UIDataText.CVImageAlt" 
                             alt="@UIText.CVImageAlt" 
-                            <!--ToChange: Configurer l'affichage en plein écran.-->
                             width="300" 
                             height="300"/>
                         @UIText.DownloadLabel
@@ -177,32 +123,13 @@
 
         @if (projects.Any()) 
         {
-            @for (var index = 0; index < projects.Count(); index++) 
-            {
-                var project = projects[index];
-                var imageFirst = index % 2 == 1;
-
-                <div class="row gx-0 @(imageFirst ? "mb-5 mb-lg-0" : string.Empty) justify-content-center">
-                    <div class="col-lg-6">
-                        <img class="img-fluid"
-                            src="@project.ImageUrl"
-                            alt="@UIText.ProjectImageAlt" />
-                    </div>
-                    <div class="col-lg-6 @(imageFirst ? string.Empty : "order-lg-1")">
-                        <div class="bg-black text-center h-100 project">
-                            <div class="d-flex h-100">
-                                <div class="project-text w-100 my-auto text-center @(imageFirst ? "text-lg-left" : "text-lg-right")">
-                                    <h4 class="text-white">@project.Title</h4>
-                                    <p class="mb-0 text-white-50">@project.Description</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            }
+            @await Html.PartialAsync("_CardProjects", projects)
         }
     </div>
+    
 </section>
+
+@await Html.PartialAsync("_Modal")
 
 <!-- Credit-->
 <section class="signup-section" id="privacy">
@@ -244,7 +171,7 @@
                         <div class="small text-black-50">
                            @if (!string.IsNullOrWhiteSpace(user?.Email))
                             {
-                                <a href="mailto:@user.Email">@user.Email</a>
+                                <a href="mailto:@user?.Email">@user?.Email</a>
                             }
                         </div>
                     </div>
@@ -269,14 +196,14 @@
                    href="@user.GitHubUrl"
                    target="_blank"
                    aria-label="GitHub">
-                    <i class="fab fa-github" aria-hidden="true"></i>
+                    <img class="social-logo"
+                        src="~/assets/img/github-logo.png"
+                        alt="GitHub"
+                        width="22"
+                        height="22" />
                 </a>
             </div>
         }
     </div>
 </section>
 
-@section Scripts 
-{
-    <script src="~/js/site.js"></script>
-}

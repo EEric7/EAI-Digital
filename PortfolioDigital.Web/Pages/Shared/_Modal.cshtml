@@ -1,0 +1,42 @@
+<!-- Modal - Pop-up pour afficher les détails du projet -->
+<div class="modal fade" id="projectModal" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="projectTitle">Titre du Projet</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <img id="projectImage" src="" alt="Projet" class="img-fluid mb-3" style="border-radius: 8px; max-height: 300px; object-fit: cover;">
+                <section class="experience-details">
+                    <div class="experience-card">
+                        <div id="projectDateContainer" class="experience-date">
+                           <p id="projectDate">Début du projet - Fin du projet</p>
+                        </div>
+
+                        <div class="experience-content">
+
+                            <h2 id="projectPosition">Role</h2>
+
+                            <div class="experience-company">
+                                <span id="projectCompany">Compagnie</span> • <span id="projectLocation">Lieux</span>
+                            </div>
+
+                            <p id="projectDescription" class="text-muted">Description du projet</p>
+
+                            <div class="experience-technos">
+                                <h4>Technologies</h4>
+                                <ul id="projectTechnologiesList" style="list-style: none; padding: 0;">
+                                    <li>Technologie 1</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary underline" data-bs-dismiss="modal">Fermer</button>
+            </div>
+        </div>
+    </div>
+</div>
