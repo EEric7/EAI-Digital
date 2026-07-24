@@ -1,0 +1,107 @@
+@using PortfolioDigital.Web.Models.Commun
+@functions {
+    private static int ParseLevel(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+            return 0;
+
+        string str = value switch
+        {
+            "Beginner" => "25",
+            "Intermediate" => "50",
+            "Advanced" => "75",
+            "Expert" => "100",
+            _ => "0"
+        };
+
+        return int.TryParse(str, out var level)
+            ? Math.Clamp(level, 0, 100)
+            : 0;
+    }
+
+    private static string SetLevelBackgroundColor(string? Level)
+    {
+        string str = Level switch
+        {
+            "Beginner" => " #67c29c",
+            "Intermediate" => " #0d6efd",
+            "Advanced" => " #7464a1",
+            "Expert" => " #6610f2",
+            _ => "rgb(255, 255, 255)"
+        };
+        return str;
+    }
+}
+
+<section class="services-showcase py-5" id="skills">
+	<div class="container-fluid services-container px-3 px-lg-5">
+		<div class="text-center mb-5">
+			<h2 class="services-title mb-2">MES SERVICES</h2>
+			<p class="services-subtitle mb-3">Des prestations adaptees a vos besoins</p>
+			<span class="services-divider" aria-hidden="true"></span>
+		</div>
+
+		<div class="container px-4 px-lg-5">
+            <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
+                <div class="col-lg-4">
+                    @foreach (var item in Model)
+                    {   
+                        <div class="service-line service-line-left">
+                            <div class="service-copy text-lg-end text-center">
+                                <h3>@item.Name</h3>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        role="progressbar"
+                                        aria-valuenow="@ParseLevel(item.Level)"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100";
+                                        style="width:@ParseLevel(item.Level)%;
+                                        background:@SetLevelBackgroundColor(item.Level);">
+                                        <span class="progress-value"></span>
+                                        <span class="progress-icon" style="border-bottom-color:@SetLevelBackgroundColor(item.Level);"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="services-center-visual" aria-hidden="true">
+                        <a href="#!">
+                            <img class="img-fluid" 
+                                src="@UIDataText.CVImageAlt" 
+                                alt="@UIText.CVImageAlt" 
+                                width="300" 
+                                height="300"/>
+                                @UIText.DownloadLabel
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    @foreach (var item in Model)
+                    {   
+                        <div class="service-line service-line-left">
+                            <div class="service-copy text-lg-end text-center">
+                                <h3>@item.Name</h3>
+                                <div class="progress">
+                                    <div class="progress-bar"
+                                        role="progressbar"
+                                        aria-valuenow="@ParseLevel(item.Level)"
+                                        aria-valuemin="0"
+                                        aria-valuemax="100";
+                                        style="width:@ParseLevel(item.Level)%;
+                                        background:@SetLevelBackgroundColor(item.Level);">
+                                        <span class="progress-value"></span>
+                                        <span class="progress-icon" style="border-bottom-color:@SetLevelBackgroundColor(item.Level);"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+		</div>
+	</div>
+</section>

@@ -15,49 +15,20 @@
 @await Html.PartialAsync("_Menu", home?.MenuModel)
 
 <!--Master Head-->
-<header class="masthead supernova-hero">
+<header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
-            <div class="text-center supernova-content">
-                <h1 class="mx-auto my-0 text-uppercase supernova-title">@user?.UserName</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5 supernova-subtitle">@user?.Profession</h2>
+            <div class="text-center">
+                <h1 class="mx-auto my-0 text-uppercase">@user?.UserName</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">@user?.Profession</h2>
                 <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
                     <a class="btn btn-primary" href="#about">@UIText.WhoAmIButton</a>
-                    <button type="button"
-                            class="btn btn-outline-light"
-                            data-bs-toggle="modal"
-                            data-bs-target="#introModal">
-                        Ouvrir une pop-up
-                    </button>
                 </div>
             </div>
         </div>
     </div>
 
 </header>
-
-<div class="modal fade" id="introModal" tabindex="-1" aria-labelledby="introModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="introModalLabel">Exemple de pop-up Bootstrap</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
-            </div>
-            <div class="modal-body">
-                <p class="mb-3">
-                    Cette fenetre est ouverte directement depuis un bouton Razor avec
-                    <code>data-bs-toggle="modal"</code> et <code>data-bs-target="#introModal"</code>.
-                </p>
-                <p class="mb-0 text-muted">
-                    Tu peux reutiliser ce modele pour afficher un message, une confirmation ou des details dynamiques.
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!--About-->
 <section class="about-section text-center" id="about">
@@ -74,62 +45,22 @@
     </div>
 </section>
 
-<!-- Skills and projects-->
-<section class="projects-section bg-light section-Custom" id="skills">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
-            <div class="col-xl-8 col-lg-7">
-                @if (skills.Any())
-                {
-                    <h2 class="text-black mb-4">@UIText.SkillsLanguageHeader</h2>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="container"></div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                @await Html.PartialAsync("_ProgressbarSkills", skills.Where(s => s.Category == "Language"))
-                            </div>
-                            <div class="col-md-6">
-                                @await Html.PartialAsync("_ProgressbarSkills", skills.Where(s => s.Category == "Framework"))
-                            </div>
-                        </div>
-                    </div>
-                    <h2 class="text-black mb-4">@UIText.SkillsWorkflowHeader</h2>
-                    <div class="col-xl-8 col-lg-7">
-                        <div class="container"></div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                @await Html.PartialAsync("_ProgressbarSkills", skills.Where(s => s.Category == "Design" || s.Category == "Version Control"))
-                            </div>
-                        </div>
-                    </div>
-                }
-            </div>
-            <div class="col-xl-4 col-lg-5">
-                <div class="featured-text text-center text-lg-left">
-                    <h2 class="text-black mb-4">@UIText.CVHeader</h2>
-                    <a href="#!">
-                        <img class="img-fluid" 
-                            src="@UIDataText.CVImageAlt" 
-                            alt="@UIText.CVImageAlt" 
-                            width="300" 
-                            height="300"/>
-                        @UIText.DownloadLabel
-                    </a>
-                </div>
-            </div>
-        </div>
+<!-- Services-->
+@await Html.PartialAsync("_CardService")
 
-        <h2 class="text-black mb-4" id="projects">@UIText.ExperiencesHeader</h2>
+<!-- Services-->
+@await Html.PartialAsync("_BanniereSkills")
 
-        @if (projects.Any()) 
-        {
-            @await Html.PartialAsync("_CardProjects", projects)
-        }
-    </div>
-    
-</section>
-
-@await Html.PartialAsync("_Modal")
+<!-- Skills-->
+@if (skills.Any()) 
+{
+    @await Html.PartialAsync("_CardSkills", skills)
+}
+<!-- Projects-->
+@if (projects.Any()) 
+{
+    @await Html.PartialAsync("_CardProjects", projects)
+}
 
 <!-- Credit-->
 <section class="signup-section" id="privacy">

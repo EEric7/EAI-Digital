@@ -1,41 +1,39 @@
 <!-- Modal - Pop-up pour afficher les détails du projet -->
-<div class="modal fade" id="projectModal" tabindex="-1">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content">
+<div class="modal" id="projectModal" tabindex="-1" aria-labelledby="projectTitle" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content modal-experience-shell">
             <div class="modal-header">
                 <h5 class="modal-title" id="projectTitle">Titre du Projet</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <img id="projectImage" src="" alt="Projet" class="img-fluid mb-3" style="border-radius: 8px; max-height: 300px; object-fit: cover;">
-                <section class="experience-details">
-                    <div class="experience-card">
-                        <div id="projectDateContainer" class="experience-date">
-                           <p id="projectDate">Début du projet - Fin du projet</p>
+                <div class="experience-card modal-experience-card">
+                    <div id="projectDateContainer" class="experience-date modal-project-date">
+                        <p id="projectDate" class="mb-0">Début du projet - Fin du projet</p>
+                    </div>
+
+                    <div class="experience-content modal-project-content">
+
+                        <h2 id="projectPosition" class="modal-project-role">Role</h2>
+
+                        <div class="experience-company modal-project-company modal-project-meta">
+                            <span id="projectCompany" class="modal-project-meta-item">Compagnie</span>
+                            <span id="projectLocation" class="modal-project-meta-item">Lieux</span>
                         </div>
 
-                        <div class="experience-content">
+                        <p id="projectDescription" class="modal-project-description">Description du projet</p>
 
-                            <h2 id="projectPosition">Role</h2>
-
-                            <div class="experience-company">
-                                <span id="projectCompany">Compagnie</span> • <span id="projectLocation">Lieux</span>
-                            </div>
-
-                            <p id="projectDescription" class="text-muted">Description du projet</p>
-
-                            <div class="experience-technos">
-                                <h4>Technologies</h4>
-                                <ul id="projectTechnologiesList" style="list-style: none; padding: 0;">
-                                    <li>Technologie 1</li>
-                                </ul>
-                            </div>
+                        <div class="experience-technos modal-project-technos">
+                            <h4 class="modal-project-tech-title">Technologies</h4>
+                            <ul id="projectTechnologiesList" class="modal-project-tech-list" style="list-style: none; padding: 0;">
+                                <li>Technologie 1</li>
+                            </ul>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary underline" data-bs-dismiss="modal">Fermer</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Fermer</button>
             </div>
         </div>
     </div>

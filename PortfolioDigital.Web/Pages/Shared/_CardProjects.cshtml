@@ -19,40 +19,42 @@ const projects = @Html.Raw(JsonSerializer.Serialize(Model.Select(item => new
 })));
 </script>
 
-@for (var index = 0; index < Model.Count; index++) 
-{
-    var item = Model[index];
-    var isOdd = index % 2 == 1;
+<section class="projects-section bg-light" id="projects">
 
-    <div class="row gx-0 @(isOdd ? "mb-5 mb-lg-0" : null) justify-content-center">
-        <!-- Image -->
-        <div class="col-lg-6 @(isOdd ? "order-lg-2" : string.Empty)">
-            <img class="img-fluid"
-                src="@item.ImageUrl"
-                alt="@UIText.ProjectImageAlt"
-                style="transition: transform 0.3s ease-in-out; cursor: pointer;"
-                onmouseover="this.style.transform='scale(1.05)'"
-                onmouseout="this.style.transform='scale(1)'"
-                data-project-index="@index"
-                onclick="showProjectModalByIndex(@index)" />
-        </div>
-        
-        <!-- Contenu -->
-        <div class="col-lg-6 @(isOdd ? "order-lg-1" : string.Empty)">
-            <div class="bg-black text-center h-100 project" 
-                 data-project-index="@index"
-                 onclick="showProjectModalByIndex(@index)"
-                 style="@(isOdd ? "border-left: 4px solid #0d6efd;" : "border-right: 4px solid #0d6efd;"); cursor: pointer; transition: all 0.3s ease;"
-                 onmouseover="this.style.backgroundColor='#1a1a1a'"
-                 onmouseout="this.style.backgroundColor='#000000'">
-                <div class="d-flex h-100">
-                    <div class="project-text w-100 my-auto text-center @(isOdd ? "text-lg-left" : "text-lg-right")">
-                        <h4 class="text-white">@item.Title</h4>
-                        <p class="mb-0 text-white-50">@item.Description</p>
+    <div class="container px-4 px-lg-5">
+        @for (var index = 0; index < Model.Count; index++) 
+        {
+            var item = Model[index];
+            var isOdd = index % 2 == 1;
+            <div class="row gx-0 @(isOdd ? "mb-5 mb-lg-0" : null) justify-content-center">
+                <!-- Image -->
+                <div class="col-lg-6 @(isOdd ? "order-lg-2" : string.Empty)">
+                    <img class="img-fluid"
+                        src="@item.ImageUrl"
+                        alt="@UIText.ProjectImageAlt"
+                        style="transition: transform 0.3s ease-in-out; cursor: pointer;"
+                        onmouseover="this.style.transform='scale(1.05)'"
+                        onmouseout="this.style.transform='scale(1)'"
+                        data-project-index="@index"
+                        onclick="showProjectModalByIndex(@index)" />
+                </div>
+                
+                <!-- Contenu -->
+                <div class="col-lg-6 @(isOdd ? "order-lg-1" : string.Empty)">
+                    <div class="bg-black text-center h-100 project" 
+                        data-project-index="@index">
+                        <div class="d-flex h-100">
+                            <div class="project-text w-100 my-auto text-center @(isOdd ? "text-lg-left" : "text-lg-right")">
+                                <h4 class="text-white">@item.Title</h4>
+                                <p class="mb-0 text-white-50">@item.Description</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        }
     </div>
-}
+    @await Html.PartialAsync("_Modal")
+</section>
+
 

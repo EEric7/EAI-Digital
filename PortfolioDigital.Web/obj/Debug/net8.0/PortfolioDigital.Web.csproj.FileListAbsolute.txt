@@ -22,7 +22,11 @@
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.PortfolioDigital.Web.props
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.PortfolioDigital.Web.props
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/staticwebassets.pack.json
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/Pages/Shared/_BanniereSkills.cshtml.rz.scp.css
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/Pages/Shared/_CardService.cshtml.rz.scp.css
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/Pages/Shared/_Layout.cshtml.rz.scp.css
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/Pages/Shared/_Modal.cshtml.rz.scp.css
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/Pages/Shared/_ProgressbarSkills.cshtml.rz.scp.css
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/bundle/PortfolioDigital.Web.styles.css
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/projectbundle/PortfolioDigital.Web.bundle.scp.css
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/PortfolioDigital.Web.dll

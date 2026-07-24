@@ -38,14 +38,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19NZW51LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_Modal.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Nb2RhbC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_ProgressbarSkills.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Qcm9ncmVzc2JhclNraWxscy5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -58,6 +50,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_BanniereSkills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19CYW5uaWVyZVNraWxscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-ypwuffzwt8
+
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_CardService.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19DYXJkU2VydmljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-bo3o462jbj
+
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_CardSkills.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19DYXJkU2tpbGxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = b-e2pys9x4tj
+
 [/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-dcyh1cv262
+
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_Modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19Nb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = b-7q68jviua8

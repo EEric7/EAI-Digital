@@ -108,5 +108,13 @@ namespace PortfolioDigital.Web.Models.Commun
                 "Maintenance et évolution et correction de la plateforme."
             }
         };
+
+        public static readonly string[] SkillsLogoPathFolder = new string[]
+        {
+            "~/assets/img/Dev-logo.png",
+            "~/assets/img/Bdd-logo.png",
+            "~/assets/img/Cld-logo.png",
+            "~/assets/img/Tools-logo.png"
+        };
     }
 }

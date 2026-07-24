@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets/assets/ico/favicon.ico"
     },
     {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Bdd-logo.png",
+      "PackagePath": "staticwebassets/assets/img/Bdd-logo.png"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Cld-logo.png",
+      "PackagePath": "staticwebassets/assets/img/Cld-logo.png"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Dev-logo.png",
+      "PackagePath": "staticwebassets/assets/img/Dev-logo.png"
+    },
+    {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/ErrorPage.jpg",
       "PackagePath": "staticwebassets/assets/img/ErrorPage.jpg"
     },
@@ -23,6 +35,18 @@
     {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/PID.jpg",
       "PackagePath": "staticwebassets/assets/img/PID.jpg"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Skills-logo.png",
+      "PackagePath": "staticwebassets/assets/img/Skills-logo.png"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/StackTechno.png",
+      "PackagePath": "staticwebassets/assets/img/StackTechno.png"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Tools-logo.png",
+      "PackagePath": "staticwebassets/assets/img/Tools-logo.png"
     },
     {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Wacken.jpg",

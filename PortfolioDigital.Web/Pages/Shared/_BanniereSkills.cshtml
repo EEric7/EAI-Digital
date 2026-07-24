@@ -1,0 +1,37 @@
+@using PortfolioDigital.Web.Models.Commun
+<section class="tech-banner" id="techBanner">
+
+    <div class="tech-banner__overlay"></div>
+    <div class="nebula nebula--purple"></div>
+    <div class="nebula nebula--blue"></div>
+    <div class="stack-glow"></div>
+    <div class="light-sweep"></div>
+    <div class="noise"></div>
+
+    <canvas
+      id="particleCanvas"
+      aria-hidden="true">
+    </canvas>
+
+    <div class="tech-banner__content">
+
+        <span class="tech-banner__badge"> Architecture • Développement • Cloud</span>
+        
+        <div class="tech-banner__carousel" aria-label="Carrousel des technologies">
+            <div class="tech-banner__carousel-track">
+
+                
+                <div class="tech-banner__carousel-set" aria-hidden="true">
+                    @for (var i = 0; i < UIDataText.SkillsLogoPathFolder.Length; i++)
+                    {
+                        <span class="tech-banner__badge tech-banner__badge--icon tech-banner__carousel-item">
+                            <img class="tech-banner__logo"
+                                 src="@Url.Content(UIDataText.SkillsLogoPathFolder[i])"
+                                 alt="Logo technologie @(i + 1)" />
+                        </span>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
