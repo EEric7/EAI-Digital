@@ -70,9 +70,12 @@ function showProjectModalByIndex(index) {
     const dateEl = document.getElementById('projectDate');
     const companyEl = document.getElementById('projectCompany');
     const locationEl = document.getElementById('projectLocation');
+    const yearEl = document.getElementById('projectYear');
+    const imageEl = document.getElementById('projectImage');
+    const thumbsEl = document.getElementById('projectImageThumbs');
     const list = document.getElementById('projectTechnologiesList');
 
-    if (!titleEl || !descriptionEl || !positionEl || !dateEl || !companyEl || !locationEl || !list) {
+    if (!titleEl || !descriptionEl || !positionEl || !dateEl || !companyEl || !locationEl || !yearEl || !imageEl || !thumbsEl || !list) {
         console.error('Elements modal manquants pour afficher les details projet');
         return;
     }
@@ -92,6 +95,30 @@ function showProjectModalByIndex(index) {
     dateEl.textContent = project.startDate + ' - ' + project.endDate;
     companyEl.textContent = project.company;
     locationEl.textContent = project.location;
+    yearEl.textContent = ((project.startDate || '').split('/')[2] || '').trim() || 'N/A';
+
+    const imageUrl = (project.imageUrl || '').trim();
+    if (imageUrl) {
+        imageEl.src = imageUrl;
+        imageEl.classList.remove('is-empty');
+    } else {
+        imageEl.removeAttribute('src');
+        imageEl.classList.add('is-empty');
+    }
+
+    imageEl.alt = project.title ? ('Capture du projet ' + project.title) : 'Capture du projet';
+
+    thumbsEl.innerHTML = '';
+    if (imageUrl) {
+        // A single image is available today, so we render repeated thumbnails to keep the gallery layout.
+        for (let i = 0; i < 3; i += 1) {
+            const thumb = document.createElement('img');
+            thumb.className = 'modal-gallery-thumb';
+            thumb.src = imageUrl;
+            thumb.alt = 'Miniature ' + (i + 1);
+            thumbsEl.appendChild(thumb);
+        }
+    }
     
     // Remplir la liste des technologies
     const techArray = Array.isArray(project.technologies) ? project.technologies : [];

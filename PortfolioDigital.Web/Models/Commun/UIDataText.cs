@@ -20,6 +20,8 @@ namespace PortfolioDigital.Web.Models.Commun
         public const string Address = "25 rue des Carmes, 67100 Strasbourg, France";
         public const string PhoneNumber = "+33 6 12 34 56 78";
         public const string GitHubUrl = "https://github.com/EEric7";
+        public const string FreelanceName = "EAI Digital";
+        public const bool Available = true;
 
         // Skill Information
         public static readonly string[,] SkillLevels = new string[11, 3]
@@ -41,8 +43,8 @@ namespace PortfolioDigital.Web.Models.Commun
         public static readonly string[,] ProjectInformation = new string[3,9]
         {
             { 
-                "Applicationde gestion d'impression encoder",
-                "Pilotage de projets clients de la phase d’analyse jusqu’au déploiement des solutions informatiques. Rédaction de cahiers des charges fonctionnels et techniques, développement, test et mise en production d’applications, participation à la gestion et à l’évolution du système d’information de l’entreprise.",
+                "Project Applicationde gestion d'impression encoder",
+                "Pilotage de développement d'un projet clients de la phase d’analyse jusqu’au déploiement des solutions informatiques.",
                 "Apprentis manager en systèmes d'information", 
                 "assets/img/PID.jpg",
                 "2018-09-01",
@@ -52,8 +54,8 @@ namespace PortfolioDigital.Web.Models.Commun
                 "C#/WPF/XML/.NET 4.6/ASP.NET Core/Entity Framework Core/Microservices/Dapper/API REST/SQL Server"
             },
             { 
-                "Web Service Signature électronique",
-                "Participation à l’étude de faisabilité technique pour l’intégration de partenaires tiers, à la planification et au suivi des projets, ainsi qu’au développement de nouvelles fonctionnalités web services. Montée en compétence sur les technologies, processus métier, audite et outils internes de l’entreprise.",
+                "Project Web Service Signature électronique",
+                "L’étude de faisabilité technique pour l’intégration de partenaires tiers, ainsi qu’au développement de nouvelles fonctionnalités web services.",
                 "Conseiller It", 
                 "assets/img/Wacken2.jpg",
                 "2022-03-01",
@@ -63,8 +65,8 @@ namespace PortfolioDigital.Web.Models.Commun
                 "C#/.NET/ASP.NET Core/SQL Server/Dapper/API REST/Microservices/Visual Studio/Git."
             },
             { 
-                "Web Service de déploiement cognitif",
-                "Participation à l’analyse des besoins d’évolution d’un web service de déploiement cognitif, à la modernisation de l’infrastructure pour une migration vers le cloud, ainsi qu’à la configuration des environnements de déploiement. Vérification de la compatibilité avec les normes et protocoles cloud et optimisation des performances du service après migration.",
+                "Project Web Service de déploiement cognitif",
+                "La modernisation de l’infrastructure pour une migration vers le cloud, ainsi qu’à la configuration des environnements de déploiement.",
                 "Conseiller It", 
                 "assets/img/Wacken.jpg",
                 "2023-04-01",
@@ -109,12 +111,20 @@ namespace PortfolioDigital.Web.Models.Commun
             }
         };
 
-        public static readonly string[] SkillsLogoPathFolder = new string[]
+        public static readonly string[,] SkillsLogoPathFolder = new string[4,3]
         {
-            "~/assets/img/Dev-logo.png",
-            "~/assets/img/Bdd-logo.png",
-            "~/assets/img/Cld-logo.png",
-            "~/assets/img/Tools-logo.png"
+            { "~/assets/img/Dev-logo.png", "Sur-Mesure" , "3000€"},
+            { "~/assets/img/Bdd-logo.png", "BDD" , "1800€"},
+            { "~/assets/img/Cld-logo.png", "Cloud", "1299€" },
+            { "~/assets/img/Tools-logo.png", "Maintenance", "400€ /AN" }
+        };
+
+        public static readonly string[,] MenuItems = new string[4, 2]
+        {
+            { "Services", "#service" },
+            { "Tarifs", "#tarifs" },
+            { "About", "#about" },
+            { "Contacts", "#contacts" }
         };
     }
 }

@@ -14,6 +14,15 @@ namespace PortfolioDigital.Web.Models.Commun
         
         // Section Headers
         public const string WhoAmIHeader = "Qui-suis je?";
+        public const string AboutHeader = @"À propos";
+
+        public const string TarifSloganHeader = "L’expertise logicielle au service de votre croissance.";
+
+        public const string TarifFormuleHeader = "Formule ";
+
+        public const string TarifFromHeader = "À Partir de ";
+
+        public const string Freelance = "Disponible pour des missions en freelance";
         public const string SkillsLanguageHeader = "PROGRAMMING LANGUAGE & TOOLS";
         public const string SkillsWorkflowHeader = "WORKFLOW";
         public const string ExperiencesHeader = "EXPERIENCE";

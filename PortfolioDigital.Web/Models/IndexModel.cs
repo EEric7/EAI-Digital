@@ -6,13 +6,9 @@ namespace PortfolioDigital.Web.Models
     public class IndexHomeModel
     {
         [BindProperty]
-        public List<Tuple<string, string>> MenuModel { get; set; } = new List<Tuple<string, string>>()
-        {
-            new Tuple<string, string>("About", "#about"),
-            new Tuple<string, string>("Skills", "#skills"),
-            new Tuple<string, string>("Projects", "#projects"),
-            new Tuple<string, string>("Contacts", "#contacts")
-        };
+        public List<Tuple<string, string>> MenuModel { get; set; } = Enumerable.Range(0, UIDataText.MenuItems.GetLength(0))
+            .Select(i => new Tuple<string, string>(UIDataText.MenuItems[i, 0], UIDataText.MenuItems[i, 1]))
+            .ToList();
 
         [BindProperty]
         public UserModel? UserModel { get; set; } = new UserModel();

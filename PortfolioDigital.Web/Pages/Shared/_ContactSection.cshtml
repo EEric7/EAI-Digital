@@ -1,0 +1,58 @@
+@using PortfolioDigital.Web.Models.Commun
+<section class="credit-section bg-black" id="contacts">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2" aria-hidden="true"></i>
+                        <h4 class="text-uppercase m-0">@UIText.AddressLabel</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">@Model?.Address</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2" aria-hidden="true"></i>
+                        <h4 class="text-uppercase m-0">@UIText.EmailLabel</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">
+                           @if (!string.IsNullOrWhiteSpace(Model?.Email))
+                            {
+                                <a href="mailto:@Model?.Email">@Model?.Email</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2" aria-hidden="true"></i>
+                        <h4 class="text-uppercase m-0">@UIText.PhoneLabel</h4>
+                        <hr class="my-4 mx-auto" />
+                        <div class="small text-black-50">@Model?.PhoneNumber</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(Model?.GitHubUrl))
+        {
+            <div class="social d-flex justify-content-center">
+                <a class="mx-2"
+                   href="@Model?.GitHubUrl"
+                   target="_blank"
+                   aria-label="GitHub">
+                    <img class="social-logo"
+                        src="~/assets/img/github-logo.png"
+                        alt="GitHub"
+                        width="22"
+                        height="22" />
+                </a>
+            </div>
+        }
+    </div>
+</section>

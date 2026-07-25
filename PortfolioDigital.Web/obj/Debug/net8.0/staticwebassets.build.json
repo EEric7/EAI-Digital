@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xoR4b/8JEXzjruOhd5x0YhGVBNF3SAmtFx6aYwRrIkE=",
+  "Hash": "xiQiNnTiVXH1d6+QFVIJhTNhYNzfIp9Yi0UvznmvKz0=",
   "Source": "PortfolioDigital.Web",
   "BasePath": "_content/PortfolioDigital.Web",
   "Mode": "Default",
@@ -53,6 +53,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/obj/Debug/net8.0/scopedcss/projectbundle/PortfolioDigital.Web.bundle.scp.css"
+    },
+    {
+      "Identity": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/CV.NET.pdf",
+      "SourceId": "PortfolioDigital.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/",
+      "BasePath": "_content/PortfolioDigital.Web",
+      "RelativePath": "assets/CV.NET.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/CV.NET.pdf"
     },
     {
       "Identity": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/ico/cv.ico",
@@ -395,6 +414,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/img/Workstation.jpg"
+    },
+    {
+      "Identity": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/Projet-Capture-d’écran-1.png",
+      "SourceId": "PortfolioDigital.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/",
+      "BasePath": "_content/PortfolioDigital.Web",
+      "RelativePath": "assets/Projet-Capture-d’écran-1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/Projet-Capture-d’écran-1.png"
     },
     {
       "Identity": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/css/custom.css",

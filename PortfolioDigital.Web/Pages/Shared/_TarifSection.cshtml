@@ -15,19 +15,27 @@
 
     <div class="tech-banner__content">
 
-        <span class="tech-banner__badge"> Architecture • Développement • Cloud</span>
+        <span class="tech-banner__badge"> @UIText.TarifSloganHeader</span>
         
         <div class="tech-banner__carousel" aria-label="Carrousel des technologies">
             <div class="tech-banner__carousel-track">
 
                 
                 <div class="tech-banner__carousel-set" aria-hidden="true">
-                    @for (var i = 0; i < UIDataText.SkillsLogoPathFolder.Length; i++)
+                    @for (var i = 0; i < UIDataText.SkillsLogoPathFolder.GetLength(0); i++)
                     {
                         <span class="tech-banner__badge tech-banner__badge--icon tech-banner__carousel-item">
                             <img class="tech-banner__logo"
-                                 src="@Url.Content(UIDataText.SkillsLogoPathFolder[i])"
+                                 src="@Url.Content(UIDataText.SkillsLogoPathFolder[i,0])"
                                  alt="Logo technologie @(i + 1)" />
+
+                            <div class="carte-prix">
+                                <h3>@UIText.TarifFormuleHeader @UIDataText.SkillsLogoPathFolder[i,1]</h3>
+                                <div class="prix">
+                                    <span class="devise">@UIText.TarifFromHeader</span>
+                                </div> 
+                                <p class="ancien-prix"><data value="@UIDataText.SkillsLogoPathFolder[i,2]">@UIDataText.SkillsLogoPathFolder[i,2]</data> *</p>
+                            </div>
                         </span>
                     }
                 </div>

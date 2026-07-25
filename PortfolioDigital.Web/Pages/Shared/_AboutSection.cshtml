@@ -1,0 +1,50 @@
+@using PortfolioDigital.Web.Models.Commun
+
+@{
+    var user = Model?.UserModel;
+    var projects = Model?.ProjectModelDisplay;
+}
+
+<section class="about-section text-center" id="about">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-3 gx-lg-4 gy-4 justify-content-center">
+
+            <div class="col-lg-10">
+                <h2 class="text-white mb-4">@UIText.AboutHeader</h2>
+                <p class="text-white-50" >@user?.Description</p>
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row gx-4 gy-4 mt-3">
+                    @for(var index = 0; index < projects?.Count; index++)
+                    {
+                        <div class="col-12 col-md-4">
+                            <div class="card about-card h-100 border-0">
+                                <div class="about-card-image-wrapper">
+                                    <img class="about-card-image" 
+                                        src="@projects[index]?.ImageUrl" 
+                                        alt="@projects[index]?.Title" />
+                                </div>
+                                <div class="card-body text-start">
+                                    <h5 class="card-title mb-2">@projects[index]?.Title</h5>
+                                    <p class="card-text mb-0">
+                                        @projects[index]?.Description
+                                    </p>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-9">
+                <img class="img-fluid" 
+                    src="@UIDataText.ProfileImageAlt"
+                    alt="@UIText.ProfileImageAlt"
+
+                />
+            </div>
+        </div>
+    </div>
+</section>

@@ -12,7 +12,7 @@
     ViewData["SubTitle"] = user?.Profession ?? UIText.DefaultProfession;
 }
 
-@await Html.PartialAsync("_Menu", home?.MenuModel)
+@await Html.PartialAsync("_IndexNav", home?.MenuModel)
 
 <!--Master Head-->
 <header class="masthead">
@@ -27,114 +27,20 @@
             </div>
         </div>
     </div>
-
 </header>
 
+<!-- Services-->
+@await Html.PartialAsync("_ServiceSection")
+
+<!-- Tarifs-->
+@await Html.PartialAsync("_TarifSection")
+
 <!--About-->
-<section class="about-section text-center" id="about">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8">
-                <h2 class="text-white mb-4">@user?.UserName</h2>
-                <p class="text-white-50">@user?.Description</p>
-            </div>
-        </div>
-        <img class="img-fluid" 
-            src="@UIDataText.ProfileImageAlt" 
-            alt="@UIText.ProfileImageAlt" />
-    </div>
-</section>
-
-<!-- Services-->
-@await Html.PartialAsync("_CardService")
-
-<!-- Services-->
-@await Html.PartialAsync("_BanniereSkills")
-
-<!-- Skills-->
-@if (skills.Any()) 
-{
-    @await Html.PartialAsync("_CardSkills", skills)
-}
-<!-- Projects-->
-@if (projects.Any()) 
-{
-    @await Html.PartialAsync("_CardProjects", projects)
-}
+@await Html.PartialAsync("_AboutSection", home)
 
 <!-- Credit-->
-<section class="signup-section" id="privacy">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-10 col-lg-8 mx-auto text-center">
-                <h2 class="text-white mb-4">@UIText.ProjectsTitle</h2>
-                <p class="text-white-50">
-                    @UIText.ProjectsDescription
-                    <a href="@UIText.LinkGrayscale" 
-                        target="_blank" 
-                        rel="noopener noreferrer">Start Bootstrap</a>
-                </p>
-            </div>
-         </div>
-    </div>
-</section>
+@await Html.PartialAsync("_CreditSection")
 
 <!-- Contact-->
-<section class="contact-section bg-black" id="contacts">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-map-marked-alt text-primary mb-2" aria-hidden="true"></i>
-                        <h4 class="text-uppercase m-0">@UIText.AddressLabel</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">@user?.Address</div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-envelope text-primary mb-2" aria-hidden="true"></i>
-                        <h4 class="text-uppercase m-0">@UIText.EmailLabel</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">
-                           @if (!string.IsNullOrWhiteSpace(user?.Email))
-                            {
-                                <a href="mailto:@user?.Email">@user?.Email</a>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 mb-3 mb-md-0">
-                <div class="card py-4 h-100">
-                    <div class="card-body text-center">
-                        <i class="fas fa-mobile-alt text-primary mb-2" aria-hidden="true"></i>
-                        <h4 class="text-uppercase m-0">@UIText.PhoneLabel</h4>
-                        <hr class="my-4 mx-auto" />
-                        <div class="small text-black-50">@user?.PhoneNumber</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        @if (!string.IsNullOrWhiteSpace(user?.GitHubUrl))
-        {
-            <div class="social d-flex justify-content-center">
-                <a class="mx-2"
-                   href="@user.GitHubUrl"
-                   target="_blank"
-                   aria-label="GitHub">
-                    <img class="social-logo"
-                        src="~/assets/img/github-logo.png"
-                        alt="GitHub"
-                        width="22"
-                        height="22" />
-                </a>
-            </div>
-        }
-    </div>
-</section>
+@await Html.PartialAsync("_ContactSection", user)
 

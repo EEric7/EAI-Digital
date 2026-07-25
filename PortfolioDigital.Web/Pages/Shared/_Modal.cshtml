@@ -1,24 +1,31 @@
 <!-- Modal - Pop-up pour afficher les détails du projet -->
 <div class="modal" id="projectModal" tabindex="-1" aria-labelledby="projectTitle" aria-hidden="true" data-bs-backdrop="false" data-bs-keyboard="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content modal-experience-shell">
             <div class="modal-header">
                 <h5 class="modal-title" id="projectTitle">Titre du Projet</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
             </div>
             <div class="modal-body">
-                <div class="experience-card modal-experience-card">
-                    <div id="projectDateContainer" class="experience-date modal-project-date">
-                        <p id="projectDate" class="mb-0">Début du projet - Fin du projet</p>
-                    </div>
+                <div class="modal-showcase">
+                    <section class="modal-gallery" aria-label="Apercu projet">
+                        <figure class="modal-gallery-main mb-0">
+                            <img id="projectImage" class="modal-project-image" src="" alt="Capture du projet" />
+                        </figure>
+                        <div id="projectImageThumbs" class="modal-gallery-thumbs" aria-hidden="true"></div>
+                    </section>
 
-                    <div class="experience-content modal-project-content">
+                    <aside class="modal-summary">
+                        <div id="projectDateContainer" class="experience-date modal-project-date">
+                            <p id="projectDate" class="mb-0">Début du projet - Fin du projet</p>
+                        </div>
 
                         <h2 id="projectPosition" class="modal-project-role">Role</h2>
 
                         <div class="experience-company modal-project-company modal-project-meta">
                             <span id="projectCompany" class="modal-project-meta-item">Compagnie</span>
                             <span id="projectLocation" class="modal-project-meta-item">Lieux</span>
+                            <span id="projectYear" class="modal-project-meta-item">Année</span>
                         </div>
 
                         <p id="projectDescription" class="modal-project-description">Description du projet</p>
@@ -29,6 +36,7 @@
                                 <li>Technologie 1</li>
                             </ul>
                         </div>
+                    </aside>
                     </div>
                 </div>
             </div>

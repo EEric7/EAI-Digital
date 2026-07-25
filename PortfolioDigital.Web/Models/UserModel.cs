@@ -64,6 +64,8 @@ namespace PortfolioDigital.Web.Models
         [BindProperty]
         public string? Profession => UIDataText.Profession;
 
+        public string? Enseigne => UIDataText.FreelanceName;
+
         /// <summary>
         /// Gets or sets the postal address of the admin user.
         /// This property represents the postal address associated with the admin user.

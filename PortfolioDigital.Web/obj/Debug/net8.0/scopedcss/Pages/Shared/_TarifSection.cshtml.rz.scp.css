@@ -1,4 +1,4 @@
-:root[b-ypwuffzwt8] {
+:root[b-umqkex6kwj] {
 
       --mouse-x: 0px;
 
@@ -6,7 +6,7 @@
 
     }
 
-    *[b-ypwuffzwt8] {
+    *[b-umqkex6kwj] {
 
       box-sizing: border-box;
 
@@ -16,15 +16,15 @@
 
     }
 
-    html[b-ypwuffzwt8],
+    html[b-umqkex6kwj],
 
-    body[b-ypwuffzwt8] {
+    body[b-umqkex6kwj] {
 
       min-height: 100%;
 
     }
 
-    body[b-ypwuffzwt8] {
+    body[b-umqkex6kwj] {
 
       min-height: 100vh;
 
@@ -42,7 +42,7 @@
 
     */
 
-    .tech-banner[b-ypwuffzwt8] {
+    .tech-banner[b-umqkex6kwj] {
 
       position: relative;
 
@@ -68,7 +68,7 @@
 
     */
 
-    .tech-banner__image[b-ypwuffzwt8] {
+    .tech-banner__image[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -114,7 +114,7 @@
 
     }
 
-    .tech-banner__image--icon[b-ypwuffzwt8] {
+    .tech-banner__image--icon[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -152,7 +152,7 @@
 
     */
 
-    #particleCanvas[b-ypwuffzwt8] {
+    #particleCanvas[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -174,7 +174,7 @@
 
     */
 
-    .tech-banner__overlay[b-ypwuffzwt8] {
+    .tech-banner__overlay[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -218,7 +218,7 @@
 
     */
 
-    .nebula[b-ypwuffzwt8] {
+    .nebula[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -244,7 +244,7 @@
 
     }
 
-    .nebula--purple[b-ypwuffzwt8] {
+    .nebula--purple[b-umqkex6kwj] {
 
       top: -15%;
 
@@ -264,11 +264,11 @@
 
         );
 
-      animation: nebulaPurple-b-ypwuffzwt8 16s ease-in-out infinite alternate;
+      animation: nebulaPurple-b-umqkex6kwj 16s ease-in-out infinite alternate;
 
     }
 
-    .nebula--blue[b-ypwuffzwt8] {
+    .nebula--blue[b-umqkex6kwj] {
 
       right: -10%;
 
@@ -288,7 +288,7 @@
 
         );
 
-      animation: nebulaBlue-b-ypwuffzwt8 20s ease-in-out infinite alternate;
+      animation: nebulaBlue-b-umqkex6kwj 20s ease-in-out infinite alternate;
 
     }
 
@@ -298,7 +298,7 @@
 
     */
 
-    .light-sweep[b-ypwuffzwt8] {
+    .light-sweep[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -340,7 +340,7 @@
 
       transform: rotate(13deg);
 
-      animation: lightSweep-b-ypwuffzwt8 8s ease-in-out infinite;
+      animation: lightSweep-b-umqkex6kwj 8s ease-in-out infinite;
 
     }
 
@@ -350,7 +350,7 @@
 
     */
 
-    .stack-glow[b-ypwuffzwt8] {
+    .stack-glow[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -386,7 +386,7 @@
 
       filter: blur(25px);
 
-      animation: stackGlow-b-ypwuffzwt8 3.8s ease-in-out infinite;
+      animation: stackGlow-b-umqkex6kwj 3.8s ease-in-out infinite;
 
     }
 
@@ -396,7 +396,7 @@
 
     */
 
-    .noise[b-ypwuffzwt8] {
+    .noise[b-umqkex6kwj] {
 
       position: absolute;
 
@@ -412,7 +412,7 @@
 
         url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
 
-      animation: noiseShift-b-ypwuffzwt8 0.2s steps(2) infinite;
+      animation: noiseShift-b-umqkex6kwj 0.2s steps(2) infinite;
 
     }
 
@@ -424,7 +424,7 @@
 
     */
 
-    .tech-banner__content[b-ypwuffzwt8] {
+    .tech-banner__content[b-umqkex6kwj] {
 
       position: relative;
 
@@ -452,7 +452,7 @@
 
     }
 
-    .tech-banner__carousel[b-ypwuffzwt8] {
+    .tech-banner__carousel[b-umqkex6kwj] {
 
       width: min(72rem, 100%);
 
@@ -468,7 +468,7 @@
 
     }
 
-    .tech-banner__carousel-track[b-ypwuffzwt8] {
+    .tech-banner__carousel-track[b-umqkex6kwj] {
 
       display: flex;
 
@@ -488,13 +488,13 @@
 
     }
 
-    .tech-banner__carousel-track[b-ypwuffzwt8]::-webkit-scrollbar {
+    .tech-banner__carousel-track[b-umqkex6kwj]::-webkit-scrollbar {
 
       display: none;
 
     }
 
-    .tech-banner__carousel-set[b-ypwuffzwt8] {
+    .tech-banner__carousel-set[b-umqkex6kwj] {
 
       display: flex;
 
@@ -510,7 +510,7 @@
 
     }
 
-    .tech-banner__carousel-item[b-ypwuffzwt8] {
+    .tech-banner__carousel-item[b-umqkex6kwj] {
 
       flex: 0 0 auto;
 
@@ -526,13 +526,13 @@
 
     }
 
-    .tech-banner__badge-grid[b-ypwuffzwt8] {
+    .tech-banner__badge-grid[b-umqkex6kwj] {
 
       display: none;
 
     }
 
-    .tech-banner__badge[b-ypwuffzwt8] {
+    .tech-banner__badge[b-umqkex6kwj] {
 
       padding: 0.65rem 1rem;
 
@@ -552,11 +552,11 @@
 
       text-transform: uppercase;
 
-      animation: badgeFloat-b-ypwuffzwt8 4s ease-in-out infinite;
+      animation: badgeFloat-b-umqkex6kwj 4s ease-in-out infinite;
 
     }
 
-    .tech-banner__badge--icon[b-ypwuffzwt8] {
+    .tech-banner__badge--icon[b-umqkex6kwj] {
 
       display: inline-flex;
 
@@ -597,7 +597,7 @@
 
     }
 
-    .tech-banner__logo[b-ypwuffzwt8] {
+    .tech-banner__logo[b-umqkex6kwj] {
 
       display: block;
 
@@ -619,15 +619,15 @@
 
     }
 
-    .tech-banner__badge--icon:hover[b-ypwuffzwt8],
-    .tech-banner__badge--icon:focus-within[b-ypwuffzwt8] {
+    .tech-banner__badge--icon:hover[b-umqkex6kwj],
+    .tech-banner__badge--icon:focus-within[b-umqkex6kwj] {
 
       transform: translateY(-4px);
 
     }
 
-    .tech-banner__badge--icon:hover .tech-banner__logo[b-ypwuffzwt8],
-    .tech-banner__badge--icon:focus-within .tech-banner__logo[b-ypwuffzwt8] {
+    .tech-banner__badge--icon:hover .tech-banner__logo[b-umqkex6kwj],
+    .tech-banner__badge--icon:focus-within .tech-banner__logo[b-umqkex6kwj] {
 
       transform: scale(1.14);
 
@@ -641,7 +641,7 @@
 
     */
 
-    @keyframes cinematicZoom-b-ypwuffzwt8 {
+    @keyframes cinematicZoom-b-umqkex6kwj {
 
       0% {
 
@@ -681,7 +681,7 @@
 
     }
 
-    @keyframes luminosityPulse-b-ypwuffzwt8 {
+    @keyframes luminosityPulse-b-umqkex6kwj {
 
       0%,
 
@@ -711,7 +711,7 @@
 
     }
 
-    @keyframes nebulaPurple-b-ypwuffzwt8 {
+    @keyframes nebulaPurple-b-umqkex6kwj {
 
       from {
 
@@ -735,7 +735,7 @@
 
     }
 
-    @keyframes nebulaBlue-b-ypwuffzwt8 {
+    @keyframes nebulaBlue-b-umqkex6kwj {
 
       from {
 
@@ -759,7 +759,7 @@
 
     }
 
-    @keyframes lightSweep-b-ypwuffzwt8 {
+    @keyframes lightSweep-b-umqkex6kwj {
 
       0%,
 
@@ -797,7 +797,7 @@
 
     }
 
-    @keyframes stackGlow-b-ypwuffzwt8 {
+    @keyframes stackGlow-b-umqkex6kwj {
 
       0%,
 
@@ -819,7 +819,7 @@
 
     }
 
-    @keyframes noiseShift-b-ypwuffzwt8 {
+    @keyframes noiseShift-b-umqkex6kwj {
 
       0% {
 
@@ -853,7 +853,7 @@
 
     }
 
-    @keyframes badgeFloat-b-ypwuffzwt8 {
+    @keyframes badgeFloat-b-umqkex6kwj {
 
       0%,
 
@@ -879,13 +879,13 @@
 
     @media (max-width: 768px) {
 
-      .tech-banner[b-ypwuffzwt8] {
+      .tech-banner[b-umqkex6kwj] {
 
         min-height: 60vh;
 
       }
 
-      .tech-banner__content[b-ypwuffzwt8] {
+      .tech-banner__content[b-umqkex6kwj] {
 
         min-height: 60vh;
 
@@ -895,7 +895,7 @@
 
       }
 
-      .tech-banner__logo[b-ypwuffzwt8] {
+      .tech-banner__logo[b-umqkex6kwj] {
 
         height: clamp(7rem, 24vw, 9.5rem);
 
@@ -903,7 +903,7 @@
 
       }
 
-      .tech-banner__carousel-track[b-ypwuffzwt8] {
+      .tech-banner__carousel-track[b-umqkex6kwj] {
 
         animation-duration: 18s;
 
@@ -912,13 +912,13 @@
 
       }
 
-      .tech-banner__image[b-ypwuffzwt8] {
+      .tech-banner__image[b-umqkex6kwj] {
 
         object-position: 59% center;
 
       }
 
-      .stack-glow[b-ypwuffzwt8] {
+      .stack-glow[b-umqkex6kwj] {
 
         left: 37%;
 
@@ -938,29 +938,29 @@
 
     @media (prefers-reduced-motion: reduce) {
 
-      .tech-banner__image[b-ypwuffzwt8],
+      .tech-banner__image[b-umqkex6kwj],
 
-      .nebula[b-ypwuffzwt8],
+      .nebula[b-umqkex6kwj],
 
-      .light-sweep[b-ypwuffzwt8],
+      .light-sweep[b-umqkex6kwj],
 
-      .stack-glow[b-ypwuffzwt8],
+      .stack-glow[b-umqkex6kwj],
 
-      .noise[b-ypwuffzwt8],
+      .noise[b-umqkex6kwj],
 
-      .tech-banner__badge[b-ypwuffzwt8] {
+      .tech-banner__badge[b-umqkex6kwj] {
 
         animation: none;
 
       }
 
-      .tech-banner__image[b-ypwuffzwt8] {
+      .tech-banner__image[b-umqkex6kwj] {
 
         transform: scale(1.03);
 
       }
 
-      .tech-banner__carousel-track[b-ypwuffzwt8] {
+      .tech-banner__carousel-track[b-umqkex6kwj] {
 
         animation: none;
 

@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets/PortfolioDigital.Web.bundle.scp.css"
     },
     {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/CV.NET.pdf",
+      "PackagePath": "staticwebassets/assets/CV.NET.pdf"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/Projet-Capture-d’écran-1.png",
+      "PackagePath": "staticwebassets/assets/Projet-Capture-d’écran-1.png"
+    },
+    {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/ico/cv.ico",
       "PackagePath": "staticwebassets/assets/ico/cv.ico"
     },
