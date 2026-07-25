@@ -1,0 +1,55 @@
+.tech-card{
+    position:fixed;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(.8);
+    width:360px;
+
+    background:#171b2d;
+    border-radius:18px;
+
+    padding:30px;
+
+    color:white;
+
+    opacity:0;
+    pointer-events:none;
+
+    transition:.35s;
+    z-index:1000;
+
+    box-shadow:0 25px 80px rgba(0,0,0,.45);
+}
+
+.tech-card.show{
+    opacity:1;
+    pointer-events:auto;
+    transform:translate(-50%,-50%) scale(1);
+}
+
+.tech-card img{
+    width:70px;
+    margin:auto;
+    display:block;
+}
+
+.tech-card h2{
+    margin:20px 0;
+    text-align:center;
+}
+
+.tech-card .price{
+    text-align:center;
+    font-size:24px;
+}
+
+.tech-card__close{
+    position:absolute;
+    top:12px;
+    right:15px;
+    border:none;
+    background:none;
+    color:white;
+    font-size:28px;
+    cursor:pointer;
+}

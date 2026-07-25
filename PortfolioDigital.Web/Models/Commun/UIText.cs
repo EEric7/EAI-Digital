@@ -16,6 +16,9 @@ namespace PortfolioDigital.Web.Models.Commun
         public const string WhoAmIHeader = "Qui-suis je?";
         public const string AboutHeader = @"À propos";
 
+        public const string AboutSubtitle = "Mes expériences professionnelles.";
+        public const string ServicesTitle = "MES SERVICES";
+        public const string ServicesSubtitle = "Transformez vos idées en solutions digitales.";
         public const string TarifSloganHeader = "L’expertise logicielle au service de votre croissance.";
 
         public const string TarifFormuleHeader = "Formule ";

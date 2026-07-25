@@ -7,9 +7,6 @@
     var user = home?.UserModel;
     var skills = home?.SkillsModelDisplay?.ToList() ?? new();
     var projects = home?.ProjectModelDisplay?.ToList() ?? new();
-
-    ViewData["Title"] = user?.UserName ?? UIText.DefaultTitle;
-    ViewData["SubTitle"] = user?.Profession ?? UIText.DefaultProfession;
 }
 
 @await Html.PartialAsync("_IndexNav", home?.MenuModel)
@@ -30,17 +27,25 @@
 </header>
 
 <!-- Services-->
-@await Html.PartialAsync("_ServiceSection")
+@await Html.PartialAsync("_ServiceSection", user)
 
 <!-- Tarifs-->
-@await Html.PartialAsync("_TarifSection")
+@await Html.PartialAsync("_TarifSection", user)
 
 <!--About-->
 @await Html.PartialAsync("_AboutSection", home)
 
 <!-- Credit-->
-@await Html.PartialAsync("_CreditSection")
+@* @await Html.PartialAsync("_CreditSection") *@
 
 <!-- Contact-->
-@await Html.PartialAsync("_ContactSection", user)
+@await Html.PartialAsync("_ContactSection", home)
+
+@* @await Html.PartialAsync("_TarifCard") *@
+
+<footer class="bg-dark font-f footer text-muted align-items-center justify-content-center">
+    <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
+        &copy; 2024 - EAI Digital - <a asp-area="" asp-page="/Privacy">Portfolio</a>
+    </div>
+</footer>
 

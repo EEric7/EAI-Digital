@@ -84,5 +84,22 @@ namespace PortfolioDigital.Web.Models
         /// </summary>
         [BindProperty]
         public string? GitHubUrl => UIDataText.GitHubUrl;
+
+        /// <summary>
+        /// Gets or sets the LinkedIn URL of the admin user.
+        /// This property holds the URL to the admin user's LinkedIn profile.
+        /// It is used to showcase the user's professional background and connections on LinkedIn.
+        /// The URL should be a valid web address pointing to the user's LinkedIn page. 
+        /// </summary>
+        [BindProperty]
+        public string[,]? Prestations => UIDataText.Prestations;
+
+        /// <summary>
+        /// Gets or sets the service logo path folder for the admin user.
+        /// This property represents the folder path where the service logos are stored for the admin user.
+        /// It is used to retrieve the logos associated with the services offered by the admin user.
+        /// The folder path should be a valid directory path on the server or a relative path within the application. It is important to ensure that the folder path is accessible and contains the necessary logo files    
+        /// </summary>
+        public string[,]? ServiceLogoPathFolder => UIDataText.ServiceLogoPathFolder;
     }
 }

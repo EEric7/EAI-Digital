@@ -8,6 +8,14 @@ namespace PortfolioDigital.Web.Models.Commun
         public const string ProfileImageAlt = "assets/img/Moi.png";
         public const string CVImageAlt = "assets/ico/cv.ico";
 
+        public static readonly string[] IconsContactPath = new string[]
+        {
+            "~/assets/img/IconMap.png",
+            "~/assets/img/IconMsg.png",
+            "~/assets/img/IconTel.png",
+            "~/assets/img/github-logo.png"
+        };
+
         // User Information
         public const string FirstName = "Eric";
         public const string LastName = "ELEMBA ADI";
@@ -18,7 +26,7 @@ namespace PortfolioDigital.Web.Models.Commun
                             Mon expertise s’étend également aux méthodes Agiles, aux principes SOLID et aux design patterns.";
         public const string Profession = "Développeur .NET";
         public const string Address = "25 rue des Carmes, 67100 Strasbourg, France";
-        public const string PhoneNumber = "+33 6 12 34 56 78";
+        public const string PhoneNumber = "None";
         public const string GitHubUrl = "https://github.com/EEric7";
         public const string FreelanceName = "EAI Digital";
         public const bool Available = true;
@@ -111,20 +119,28 @@ namespace PortfolioDigital.Web.Models.Commun
             }
         };
 
-        public static readonly string[,] SkillsLogoPathFolder = new string[4,3]
+        public static readonly string[,] ServiceLogoPathFolder = new string[2,3]
         {
-            { "~/assets/img/Dev-logo.png", "Sur-Mesure" , "3000€"},
-            { "~/assets/img/Bdd-logo.png", "BDD" , "1800€"},
-            { "~/assets/img/Cld-logo.png", "Cloud", "1299€" },
-            { "~/assets/img/Tools-logo.png", "Maintenance", "400€ /AN" }
+            { "~/assets/img/Dev-logo.png", "Formule Sur-Mesure" , "3000€"},
+            //{ "~/assets/img/Bdd-logo.png", " Formule BDD" , "1800€"},
+            //{ "~/assets/img/Cld-logo.png", "Formule Cloud", "1299€" },
+            { "~/assets/img/Tools-logo.png", "Formule Maintenance", "400€ /AN" }
         };
 
         public static readonly string[,] MenuItems = new string[4, 2]
         {
-            { "Services", "#service" },
+            { "Services", "#services" },
             { "Tarifs", "#tarifs" },
             { "About", "#about" },
             { "Contacts", "#contacts" }
+        };
+
+        public static readonly string [,] Prestations = new string[4, 3]
+        {
+            { "GESTION DE PROJETS WEB", "Site vitrine, corporate, evenementiel, e-commerce, intranet, application mobile.", "La réussite d’un projet web repose autant sur son développement que sur son organisation. Chez EAI Digital, nous assurons la gestion complète de votre projet afin de garantir le respect des délais, du budget et de vos objectifs. De l’analyse de vos besoins jusqu’à la mise en ligne, nous coordonnons chaque étape pour vous offrir une solution fiable, performante et parfaitement adaptée à votre activité."},
+            { "DEVELOPPEMENTS SPECIFIQUES", "Outils adaptes a votre metier: applications et solutions personnalisees.", "Chaque entreprise possède des processus, des contraintes et des objectifs qui lui sont propres. Les logiciels standards ne couvrent pas toujours l’ensemble de vos besoins. Chez EAI Digital, nous concevons des applications et outils sur mesure qui s’adaptent parfaitement à votre activité. Nous développons des solutions performantes, évolutives et sécurisées pour automatiser vos tâches, centraliser vos données et améliorer votre productivité." },
+            { "CONCEPTION GRAPHIQUE & WEBDESIGN", "Logos, templates Web, plaquettes publicitaires, cartes de visite, newsletters.", "Votre identité visuelle est le premier contact entre votre entreprise et vos clients. Un design moderne, cohérent et intuitif renforce votre image de marque, améliore l’expérience utilisateur et favorise la conversion de vos visiteurs en clients. Chez EAI Digital, nous concevons des interfaces graphiques sur mesure, alliant créativité, ergonomie et performance, pour valoriser votre activité et offrir une expérience digitale de qualité."},
+            { "REFERENCEMENT NATUREL", "Affichage semantique des informations et pages optimisees pour le SEO.", "Gagnez en visibilité sur Google et attirez des clients qualifiés. Avoir un site internet performant est essentiel, mais encore faut-il qu’il soit visible. Grâce au référencement naturel (SEO), votre entreprise apparaît dans les résultats de recherche lorsque vos prospects recherchent vos produits ou services. Chez EAI Digital, nous mettons en place une stratégie SEO durable pour améliorer votre positionnement sur Google, augmenter votre trafic et générer davantage de contacts qualifiés."}
         };
     }
 }

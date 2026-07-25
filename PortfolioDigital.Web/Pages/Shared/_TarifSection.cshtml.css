@@ -42,7 +42,7 @@
 
     */
 
-    .tech-banner {
+    .tarif-Section {
 
       position: relative;
 
@@ -68,7 +68,7 @@
 
     */
 
-    .tech-banner__image {
+    .tarif-Section__image {
 
       position: absolute;
 
@@ -106,7 +106,7 @@
 
         brightness(0.92);
  
-      .tech-banner__carousel-track {
+      .tarif-Section__carousel-track {
  
         padding-inline: 1rem;
  
@@ -114,7 +114,7 @@
 
     }
 
-    .tech-banner__image--icon {
+    .tarif-Section__image--icon {
 
       position: absolute;
 
@@ -174,7 +174,7 @@
 
     */
 
-    .tech-banner__overlay {
+    .tarif-Section__overlay {
 
       position: absolute;
 
@@ -424,7 +424,7 @@
 
     */
 
-    .tech-banner__content {
+    .tarif-Section__content {
 
       position: relative;
 
@@ -452,23 +452,29 @@
 
     }
 
-    .tech-banner__carousel {
+    .tarif-Section__carousel {
 
-      width: min(72rem, 100%);
+    width: min(72rem, 100%);
 
-      pointer-events: auto;
+    min-width: 0;
 
-      flex: 1;
+    pointer-events: auto;
 
-      display: flex;
+    display: flex;
 
-      align-items: center;
+    align-items: center;
 
-      justify-content: center;
+    overflow-x: auto;
+
+    overflow-y: hidden;
+
+    scrollbar-width: none;
+
+    scroll-snap-type: x mandatory;
 
     }
 
-    .tech-banner__carousel-track {
+    .tarif-Section__carousel-track {
 
       display: flex;
 
@@ -488,51 +494,40 @@
 
     }
 
-    .tech-banner__carousel-track::-webkit-scrollbar {
+    .tarif-Section__carousel-track::-webkit-scrollbar {
 
       display: none;
 
     }
 
-    .tech-banner__carousel-set {
+    .tarif-Section__carousel-set {
 
-      display: flex;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    }
 
-      flex-wrap: nowrap;
+    .tarif-Section__carousel-item {
 
-      align-items: center;
+    flex: 0 0 clamp(8.75rem, 18vw, 12rem);
 
-      justify-content: center;
+    min-width: 0;
 
-      gap: 2rem;
+    padding: 0.35rem 1rem;
 
-      padding-inline: 1rem;
+    scroll-snap-align: center;
 
     }
 
-    .tech-banner__carousel-item {
-
-      flex: 0 0 auto;
-
-      width: auto;
-
-      height: auto;
-
-      min-width: clamp(8.75rem, 18vw, 12rem);
-
-      min-height: clamp(8rem, 17vw, 10.5rem);
-
-      padding: 0.35rem 1rem;
-
-    }
-
-    .tech-banner__badge-grid {
+    .tarif-Section__badge-grid {
 
       display: none;
 
     }
 
-    .tech-banner__badge {
+    .tarif-Section__badge {
 
       padding: 0.65rem 1rem;
 
@@ -556,7 +551,7 @@
 
     }
 
-    .tech-banner__badge--icon {
+    .tarif-Section__badge--icon {
 
       display: inline-flex;
 
@@ -597,7 +592,7 @@
 
     }
 
-    .tech-banner__logo {
+    .tarif-Section__logo {
 
       display: block;
 
@@ -619,15 +614,15 @@
 
     }
 
-    .tech-banner__badge--icon:hover,
-    .tech-banner__badge--icon:focus-within {
+    .tarif-Section__badge--icon:hover,
+    .tarif-Section__badge--icon:focus-within {
 
       transform: translateY(-4px);
 
     }
 
-    .tech-banner__badge--icon:hover .tech-banner__logo,
-    .tech-banner__badge--icon:focus-within .tech-banner__logo {
+    .tarif-Section__badge--icon:hover .tarif-Section__logo,
+    .tarif-Section__badge--icon:focus-within .tarif-Section__logo {
 
       transform: scale(1.14);
 
@@ -879,13 +874,13 @@
 
     @media (max-width: 768px) {
 
-      .tech-banner {
+      .tarif-Section {
 
         min-height: 60vh;
 
       }
 
-      .tech-banner__content {
+      .tarif-Section__content {
 
         min-height: 60vh;
 
@@ -895,7 +890,7 @@
 
       }
 
-      .tech-banner__logo {
+      .tarif-Section__logo {
 
         height: clamp(7rem, 24vw, 9.5rem);
 
@@ -903,7 +898,7 @@
 
       }
 
-      .tech-banner__carousel-track {
+      .tarif-Section__carousel-track {
 
         animation-duration: 18s;
 
@@ -912,7 +907,7 @@
 
       }
 
-      .tech-banner__image {
+      .tarif-Section__image {
 
         object-position: 59% center;
 
@@ -938,7 +933,7 @@
 
     @media (prefers-reduced-motion: reduce) {
 
-      .tech-banner__image,
+      .tarif-Section__image,
 
       .nebula,
 
@@ -948,22 +943,21 @@
 
       .noise,
 
-      .tech-banner__badge {
+      .tarif-Section__badge {
 
         animation: none;
 
       }
 
-      .tech-banner__image {
+      .tarif-Section__image {
 
         transform: scale(1.03);
 
       }
 
-      .tech-banner__carousel-track {
+      .tarif-Section__carousel-track {
 
         animation: none;
 
       }
-
     }

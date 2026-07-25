@@ -14,6 +14,9 @@ namespace PortfolioDigital.Web.Models
         public UserModel? UserModel { get; set; } = new UserModel();
 
         [BindProperty]
+        public string[] IconsContactPath { get; set; } = UIDataText.IconsContactPath;
+
+        [BindProperty]
         public List<SkillModel> SkillsModelDisplay { get; set; } = new List<SkillModel>();
 
         [BindProperty]

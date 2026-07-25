@@ -37,6 +37,18 @@
       "PackagePath": "staticwebassets/assets/img/ErrorPage.jpg"
     },
     {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/IconMap.png",
+      "PackagePath": "staticwebassets/assets/img/IconMap.png"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/IconMsg.png",
+      "PackagePath": "staticwebassets/assets/img/IconMsg.png"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/IconTel.png",
+      "PackagePath": "staticwebassets/assets/img/IconTel.png"
+    },
+    {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/Moi.png",
       "PackagePath": "staticwebassets/assets/img/Moi.png"
     },
@@ -103,6 +115,10 @@
     {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/js/projects.js",
       "PackagePath": "staticwebassets/js/projects.js"
+    },
+    {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/js/services-slider.js",
+      "PackagePath": "staticwebassets/js/services-slider.js"
     },
     {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/js/site.js",

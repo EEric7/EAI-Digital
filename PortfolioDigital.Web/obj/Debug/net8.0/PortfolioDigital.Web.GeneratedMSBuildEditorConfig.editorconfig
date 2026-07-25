@@ -70,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope = b-7q68jviua8
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19TZXJ2aWNlU2VjdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-p1m19uv9ep
 
+[/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_TarifCard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19UYXJpZkNhcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-f8jlcxhkzx
+
 [/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/Pages/Shared/_TarifSection.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXMvU2hhcmVkL19UYXJpZlNlY3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-umqkex6kwj

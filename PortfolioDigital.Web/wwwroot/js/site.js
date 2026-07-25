@@ -44,4 +44,27 @@
             });
         });
     }
+
+    const card = document.getElementById("tarifCard");
+    const title = document.getElementById("cardTitle");
+    const price = document.getElementById("cardPrice");
+
+    document.querySelectorAll('.tech-banner__carousel-item')
+            .forEach(item => {
+
+                item.addEventListener("click", () => {
+                    title.textContent = item.dataset.tech;
+                    price.textContent = item.dataset.price;
+                    card.classList.add("show");
+                });
+
+            });
+
+    document.querySelector('.tech-card__close')
+
+    .addEventListener("click", () => {
+
+        card.classList.remove("show");
+
+    });
 });
