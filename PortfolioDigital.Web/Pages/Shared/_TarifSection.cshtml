@@ -1,7 +1,7 @@
 @using PortfolioDigital.Web.Models.Commun
-<section class="tarif-Section" id="tarifs">
+<section class="tarif-section" id="tarifs">
 
-    <div class="tarif-Section__overlay"></div>
+    <div class="tarif-section__overlay"></div>
     <div class="nebula nebula--purple"></div>
     <div class="nebula nebula--blue"></div>
     <div class="stack-glow"></div>
@@ -13,32 +13,35 @@
       aria-hidden="true">
     </canvas>
 
-    <div class="tarif-Section__content">
-
-        <span class="tarif-Section__badge"> @UIText.TarifSloganHeader</span>
+    <div class="tarif-section__content">
+        <div class="text-center mb-5">
+			<h2 class="tarif-section__title mb-2">@UIText.TarifTitle</h2>
+			<span class="tarif-section__badge"> @UIText.TarifSloganHeader</span>
+		</div>
         
-        <div class="tarif-Section__carousel" aria-label="Carrousel des technologies">
-            <div class="tarif-Section__carousel-track">
-                <div class="tarif-Section__carousel-set" aria-hidden="true">
-                    @for (var i = 0; i < Model.ServiceLogoPathFolder.GetLength(0); i++)
+        <div class="tarif-section__carousel" aria-label="Carrousel des prestations et tarifs">
+            <div class="tarif-section__carousel-track">
+                <div class="tarif-section__carousel-set" aria-hidden="true">
+                    @for (var i = 0; i < Model.ServiceIconPath.GetLength(0); i++)
                     {
-                        var serviceName = Model.ServiceLogoPathFolder[i,1];
-                        var servicePrice = Model.ServiceLogoPathFolder[i,2];
+                        var tarifeName = Model.ServiceIconPath[i,0];
+                        var tarifType = Model.ServiceIconPath[i,1];
+                        var tarifPrice = Model.ServiceIconPath[i,2];
 
-                        <span class="tarif-Section__badge tarif-Section__badge--icon tarif-Section__carousel-item" 
-                            data-tech="@serviceName"
-                            data-price="@servicePrice">
+                        <span class="tarif-section__badge tarif-section__badge--icon tarif-section__carousel-item" 
+                            data-tech="@tarifeName"
+                            data-price="@tarifPrice">
 
-                            <img class="tarif-Section__logo"
-                                 src="@Url.Content(Model.ServiceLogoPathFolder[i,0])"
+                            <img class="tarif-section__logo"
+                                 src="@Url.Content(tarifType)"
                                  alt="Logo technologie @(i + 1)" />
 
                             <div class="carte-prix">
-                                <h3>@Model.ServiceLogoPathFolder[i,1]</h3>
+                                <h3>@tarifeName</h3>
                                 <div class="prix">
                                     <span class="devise">@UIText.TarifFromHeader</span>
                                 </div> 
-                                <p class="ancien-prix"><data value="@Model.ServiceLogoPathFolder[i,2]">@Model.ServiceLogoPathFolder[i,2]</data> *</p>
+                                <p class="prix"><data value="@tarifPrice">@tarifPrice</data> *</p>
                             </div>
                         </span>
                     }
@@ -46,5 +49,4 @@
             </div>
         </div>
     </div>
-
 </section>

@@ -1,963 +1,548 @@
 :root[b-umqkex6kwj] {
-
-      --mouse-x: 0px;
-
-      --mouse-y: 0px;
-
-    }
-
-    *[b-umqkex6kwj] {
-
-      box-sizing: border-box;
-
-      margin: 0;
-
-      padding: 0;
-
-    }
-
-    html[b-umqkex6kwj],
-
-    body[b-umqkex6kwj] {
-
-      min-height: 100%;
-
-    }
-
-    body[b-umqkex6kwj] {
-
-      min-height: 100vh;
-
-      overflow-x: hidden;
-
-      background: #02030a;
-
-      font-family: Arial, sans-serif;
-
-    }
-
-    /*
-
-      Conteneur principal
-
-    */
-
-    .tarif-Section[b-umqkex6kwj] {
-
-      position: relative;
-
-      width: 100%;
-
-      min-height: min(100vh, 900px);
-
-      overflow: hidden;
-
-      isolation: isolate;
-
-      background: #02030a;
-
-    }
-
-    /*
-
-      Image principale
-
-      L'image reste légèrement plus grande que le conteneur afin
-
-      d'éviter les bordures visibles pendant le mouvement.
-
-    */
-
-    .tarif-Section__image[b-umqkex6kwj] {
-
-      position: absolute;
-
-      inset: -4%;
-
-      z-index: 1;
-
-      width: 150px;
-
-      height: 150px;
-
-      object-fit: cover;
-
-      object-position: center;
-
-      transform:
-
-        translate3d(
-
-          var(--mouse-x),
-
-          var(--mouse-y),
-
-          0
-
-        )
-
-        scale(1.03);
-
-      filter:
-
-        saturate(1.08)
-
-        contrast(1.04)
-
-        brightness(0.92);
- 
-      .tarif-Section__carousel-track {
- 
-        padding-inline: 1rem;
- 
-      }
-
-    }
-
-    .tarif-Section__image--icon[b-umqkex6kwj] {
-
-      position: absolute;
-
-      left: 50%;
-
-      top: 50%;
-
-      inset: auto;
-
-      z-index: 6;
-
-      display: block;
-
-      width: clamp(120px, 18vw, 240px);
-
-      height: clamp(120px, 18vw, 240px);
-
-      margin: 0;
-
-      object-fit: contain;
-
-      transform: translate(-50%, -50%);
-
-      filter: none;
-
-      animation: none;
-
-      will-change: auto;
-
-    }
-
-    /*
-
-      Canvas utilisé pour les étoiles et les particules.
-
-    */
-
-    #particleCanvas[b-umqkex6kwj] {
-
-      position: absolute;
-
-      inset: 0;
-
-      z-index: 3;
-
-      width: 100%;
-
-      height: 100%;
-
-      pointer-events: none;
-
-    }
-
-    /*
-
-      Voile sombre pour garder le texte lisible.
-
-    */
-
-    .tarif-Section__overlay[b-umqkex6kwj] {
-
-      position: absolute;
-
-      inset: 0;
-
-      z-index: 2;
-
-      pointer-events: none;
-
-      background:
-
-        linear-gradient(
-
-          90deg,
-
-          rgba(1, 2, 10, 0.38) 0%,
-
-          rgba(1, 2, 10, 0.06) 48%,
-
-          rgba(1, 2, 10, 0.18) 100%
-
-        ),
-
-        radial-gradient(
-
-          circle at 65% 48%,
-
-          transparent 0%,
-
-          transparent 32%,
-
-          rgba(1, 2, 10, 0.35) 100%
-
-        );
-
-    }
-
-    /*
-
-      Nébuleuses colorées supplémentaires.
-
-    */
-
-    .nebula[b-umqkex6kwj] {
-
-      position: absolute;
-
-      z-index: 2;
-
-      width: 40vw;
-
-      min-width: 350px;
-
-      aspect-ratio: 1;
-
-      border-radius: 50%;
-
-      pointer-events: none;
-
-      filter: blur(90px);
-
-      mix-blend-mode: screen;
-
-      opacity: 0.22;
-
-      will-change: transform;
-
-    }
-
-    .nebula--purple[b-umqkex6kwj] {
-
-      top: -15%;
-
-      left: 35%;
-
-      background:
-
-        radial-gradient(
-
-          circle,
-
-          rgba(173, 47, 255, 0.75),
-
-          rgba(89, 27, 194, 0.28) 45%,
-
-          transparent 72%
-
-        );
-
-      animation: nebulaPurple-b-umqkex6kwj 16s ease-in-out infinite alternate;
-
-    }
-
-    .nebula--blue[b-umqkex6kwj] {
-
-      right: -10%;
-
-      bottom: -28%;
-
-      background:
-
-        radial-gradient(
-
-          circle,
-
-          rgba(0, 203, 255, 0.65),
-
-          rgba(24, 72, 220, 0.25) 48%,
-
-          transparent 74%
-
-        );
-
-      animation: nebulaBlue-b-umqkex6kwj 20s ease-in-out infinite alternate;
-
-    }
-
-    /*
-
-      Balayage lumineux horizontal.
-
-    */
-
-    .light-sweep[b-umqkex6kwj] {
-
-      position: absolute;
-
-      top: -40%;
-
-      bottom: -40%;
-
-      left: -35%;
-
-      z-index: 4;
-
-      width: 18%;
-
-      pointer-events: none;
-
-      opacity: 0;
-
-      background:
-
-        linear-gradient(
-
-          90deg,
-
-          transparent,
-
-          rgba(255, 255, 255, 0.05),
-
-          rgba(132, 92, 255, 0.22),
-
-          rgba(0, 210, 255, 0.18),
-
-          rgba(255, 255, 255, 0.05),
-
-          transparent
-
-        );
-
-      filter: blur(14px);
-
-      transform: rotate(13deg);
-
-      animation: lightSweep-b-umqkex6kwj 8s ease-in-out infinite;
-
-    }
-
-    /*
-
-      Halo pulsant placé approximativement sur les plaques.
-
-    */
-
-    .stack-glow[b-umqkex6kwj] {
-
-      position: absolute;
-
-      z-index: 3;
-
-      top: 12%;
-
-      left: 49%;
-
-      width: 34%;
-
-      height: 73%;
-
-      border-radius: 45%;
-
-      pointer-events: none;
-
-      background:
-
-        radial-gradient(
-
-          ellipse at center,
-
-          rgba(124, 52, 255, 0.15),
-
-          rgba(0, 196, 255, 0.07) 48%,
-
-          transparent 72%
-
-        );
-
-      mix-blend-mode: screen;
-
-      filter: blur(25px);
-
-      animation: stackGlow-b-umqkex6kwj 3.8s ease-in-out infinite;
-
-    }
-
-    /*
-
-      Grain numérique très discret.
-
-    */
-
-    .noise[b-umqkex6kwj] {
-
-      position: absolute;
-
-      inset: 0;
-
-      z-index: 5;
-
-      pointer-events: none;
-
-      opacity: 0.055;
-
-      background-image:
-
-        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
-
-      animation: noiseShift-b-umqkex6kwj 0.2s steps(2) infinite;
-
-    }
-
-    /*
-
-      Contenu HTML optionnel affiché au-dessus de l'image.
-
-      Tu peux supprimer ce bloc si ton image contient déjà tout le texte.
-
-    */
-
-    .tarif-Section__content[b-umqkex6kwj] {
-
-      position: relative;
-
-      z-index: 6;
-
-      min-height: min(100vh, 900px);
-
-      display: flex;
-
-      flex-direction: column;
-
-      justify-content: center;
-
-      align-items: center;
-
-      gap: 1rem;
-
-      width: 100%;
-
-      padding: clamp(1.5rem, 5vw, 5rem);
-
-      color: white;
-
-      pointer-events: none;
-
-    }
-
-    .tarif-Section__carousel[b-umqkex6kwj] {
-
-    width: min(72rem, 100%);
-
-    min-width: 0;
-
-    pointer-events: auto;
-
-    display: flex;
-
+  --mouse-x: 0px;
+  --mouse-y: 0px;
+}
+
+*[b-umqkex6kwj] {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html[b-umqkex6kwj],
+body[b-umqkex6kwj] {
+  min-height: 100%;
+}
+
+body[b-umqkex6kwj] {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: #02030a;
+  font-family: Arial, sans-serif;
+}
+
+/* Conteneur principal */
+
+.tarif-section__title[b-umqkex6kwj] {
+  color: #ffffff;
+  font-size: clamp(2.1rem, 4.2vw, 3.3rem);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+}
+
+.tarif-section[b-umqkex6kwj] {
+  position: relative;
+  width: 100%;
+  min-height: min(100vh, 900px);
+  overflow: hidden;
+  isolation: isolate;
+  background: #02030a;
+}
+
+/* L'image reste légèrement plus grande que le conteneur afin d'éviter les bordures visibles pendant le mouvement. */
+
+.tarif-section__image[b-umqkex6kwj] {
+  position: absolute;
+  inset: -4%;
+  z-index: 1;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  object-position: center;
+
+  transform:
+
+    translate3d(var(--mouse-x),
+      var(--mouse-y),
+      0) scale(1.03);
+
+  filter:
+
+    saturate(1.08) contrast(1.04) brightness(0.92);
+}
+
+.tarif-section__image--icon[b-umqkex6kwj] {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  inset: auto;
+  z-index: 6;
+  display: block;
+  width: clamp(120px, 18vw, 240px);
+  height: clamp(120px, 18vw, 240px);
+  margin: 0;
+  object-fit: contain;
+  transform: translate(-50%, -50%);
+  filter: none;
+  animation: none;
+  will-change: auto;
+}
+
+/* Canvas utilisé pour les étoiles et les particules. */
+
+#particleCanvas[b-umqkex6kwj] {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Voile sombre pour garder le texte lisible. */
+
+.tarif-section__overlay[b-umqkex6kwj] {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background:
+
+    linear-gradient(90deg,
+      rgba(1, 2, 10, 0.38) 0%,
+      rgba(1, 2, 10, 0.06) 48%,
+      rgba(1, 2, 10, 0.18) 100%),
+
+    radial-gradient(circle at 65% 48%,
+      transparent 0%,
+      transparent 32%,
+      rgba(1, 2, 10, 0.35) 100%);
+}
+
+/* Nébuleuses colorées supplémentaires. */
+
+.nebula[b-umqkex6kwj] {
+  position: absolute;
+  z-index: 2;
+  width: 40vw;
+  min-width: 350px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(90px);
+  mix-blend-mode: screen;
+  opacity: 0.22;
+  will-change: transform;
+}
+
+.nebula--purple[b-umqkex6kwj] {
+  top: -15%;
+  left: 35%;
+
+  background:
+
+    radial-gradient(circle,
+      rgba(173, 47, 255, 0.75),
+      rgba(89, 27, 194, 0.28) 45%,
+      transparent 72%);
+
+  animation: nebulaPurple-b-umqkex6kwj 16s ease-in-out infinite alternate;
+}
+
+.nebula--blue[b-umqkex6kwj] {
+  right: -10%;
+  bottom: -28%;
+  background:
+
+    radial-gradient(circle,
+      rgba(0, 203, 255, 0.65),
+      rgba(24, 72, 220, 0.25) 48%,
+      transparent 74%);
+
+  animation: nebulaBlue-b-umqkex6kwj 20s ease-in-out infinite alternate;
+}
+
+/* Balayage lumineux horizontal. */
+
+.light-sweep[b-umqkex6kwj] {
+  position: absolute;
+  top: -40%;
+  bottom: -40%;
+  left: -35%;
+  z-index: 4;
+  width: 18%;
+  pointer-events: none;
+  opacity: 0;
+
+  background:
+
+    linear-gradient(90deg,
+      transparent,
+      rgba(255, 255, 255, 0.05),
+      rgba(132, 92, 255, 0.22),
+      rgba(0, 210, 255, 0.18),
+      rgba(255, 255, 255, 0.05),
+
+      transparent);
+
+  filter: blur(14px);
+  transform: rotate(13deg);
+  animation: lightSweep-b-umqkex6kwj 8s ease-in-out infinite;
+}
+
+/* Halo pulsant placé approximativement sur les plaques. */
+
+.stack-glow[b-umqkex6kwj] {
+  position: absolute;
+  z-index: 3;
+  top: 12%;
+  left: 49%;
+  width: 34%;
+  height: 73%;
+  border-radius: 45%;
+  pointer-events: none;
+
+  background:
+
+  radial-gradient(ellipse at center,
+    rgba(124, 52, 255, 0.15),
+    rgba(0, 196, 255, 0.07) 48%,
+    transparent 72%);
+
+  mix-blend-mode: screen;
+  filter: blur(25px);
+  animation: stackGlow-b-umqkex6kwj 3.8s ease-in-out infinite;
+}
+
+/* Grain numérique très discret. */
+
+.noise[b-umqkex6kwj] {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0.055;
+
+  background-image:
+
+  /* TODO: Télecharger et stocker localement l'image de bruit pour de meilleures performances */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.55'/%3E%3C/svg%3E");
+
+  animation: noiseShift-b-umqkex6kwj 0.2s steps(2) infinite;
+}
+
+/* Contenu HTML optionnel affiché au-dessus de l'image. */
+
+.tarif-section__content[b-umqkex6kwj] {
+  position: relative;
+  z-index: 6;
+  min-height: min(100vh, 900px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: clamp(1.5rem, 5vw, 5rem);
+  color: white;
+  pointer-events: none;
+}
+
+.tarif-section__carousel[b-umqkex6kwj] {
+  width: calc(100% - 4px);
+  margin-inline: 2px;
+  min-width: 0;
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.tarif-section__carousel-track[b-umqkex6kwj] {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+  min-width: max-content;
+  overflow: visible;
+  padding: 0.5rem 1.5rem 0.85rem;
+}
+
+.tarif-section__carousel-track[b-umqkex6kwj]::-webkit-scrollbar {
+  display: none;
+}
+
+.tarif-section__carousel-set[b-umqkex6kwj] {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tarif-section__carousel-item[b-umqkex6kwj] {
+  flex: 0 0 clamp(14rem, 30vw, 20rem);
+  min-width: 0;
+  padding: 0.35rem 1rem;
+  scroll-snap-align: center;
+}
+
+.tarif-section__badge-grid[b-umqkex6kwj] {
+  display: none;
+}
+
+.tarif-section__badge[b-umqkex6kwj] {
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(142, 188, 255, 0.3);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(5, 9, 28, 0.48);
+  backdrop-filter: blur(10px);
+  font-size: 0.95rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  animation: Float-b-umqkex6kwj 4s ease-in-out infinite;
+}
+
+.tarif-section__badge--icon[b-umqkex6kwj] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  overflow: visible;
+  text-transform: none;
+  letter-spacing: normal;
+  animation: none;
+
+  transition:
+    transform 180ms ease,
+    filter 180ms ease;
+}
+
+.tarif-section__logo[b-umqkex6kwj] {
+  display: block;
+  width: 100%;
+  height: clamp(7.5rem, 16vw, 11rem);
+  max-width: 100%;
+  object-fit: contain;
+  transform: none;
+
+  transition:
+
+  transform 180ms ease,
+  filter 180ms ease;
+  
+  will-change: transform;
+}
+
+.tarif-section__badge--icon:hover[b-umqkex6kwj],
+.tarif-section__badge--icon:focus-within[b-umqkex6kwj] {
+  transform: translateY(-4px);
+}
+
+.tarif-section__badge--icon:hover .tarif-section__logo[b-umqkex6kwj],
+.tarif-section__badge--icon:focus-within .tarif-section__logo[b-umqkex6kwj] {
+  transform: scale(1.14);
+  filter: drop-shadow(0 0 18px rgba(135, 206, 255, 0.28));
+}
+
+/* Animations CSS */
+
+@keyframes cinematicZoom-b-umqkex6kwj {
+
+  0% {
+    transform:
+      translate3d(var(--mouse-x), var(--mouse-y), 0) 
+      scale(1.03);
+  }
+
+  100% {
+
+    transform:
+      translate3d(var(--mouse-x), var(--mouse-y), 0) 
+      scale(1.09);
+  }
+}
+
+@keyframes luminosityPulse-b-umqkex6kwj {
+
+  0%, 100% {
+    filter:
+      saturate(1.05) contrast(1.03) brightness(0.9);
+  }
+
+  50% {
+    filter:
+      saturate(1.18) contrast(1.08) brightness(1.02);
+  }
+
+}
+
+@keyframes nebulaPurple-b-umqkex6kwj {
+
+  from {
+    transform:
+      translate3d(-6%, -4%, 0) scale(0.9);
+  }
+
+  to {
+    transform:
+      translate3d(14%, 12%, 0) scale(1.18);
+  }
+}
+
+@keyframes nebulaBlue-b-umqkex6kwj {
+
+  from {
+    transform:
+      translate3d(5%, 8%, 0) scale(1);
+  }
+
+  to {
+    transform:
+      translate3d(-14%, -12%, 0) scale(1.2);
+  }
+
+}
+
+@keyframes lightSweep-b-umqkex6kwj {
+
+  0%, 15% {
+    left: -35%;
+    opacity: 0;
+  }
+
+  24% {
+    opacity: 0.8;
+  }
+
+  52% {
+    left: 120%;
+    opacity: 0.55;
+  }
+
+  60%, 100% {
+    left: 120%;
+    opacity: 0;
+  }
+}
+
+@keyframes stackGlow-b-umqkex6kwj {
+
+  0%,
+
+  100% {
+
+    opacity: 0.35;
+    transform: scale(0.96);
+  }
+
+  50% {
+
+    opacity: 0.9;
+    transform: scale(1.08);
+  }
+
+}
+
+@keyframes noiseShift-b-umqkex6kwj {
+
+  0% {
+
+    transform: translate(0, 0);
+  }
+
+  25% {
+
+    transform: translate(-1%, 1%);
+  }
+
+  50% {
+
+    transform: translate(1%, -1%);
+  }
+
+  75% {
+
+    transform: translate(1%, 1%);
+  }
+
+  100% {
+
+    transform: translate(-1%, -1%);
+  }
+}
+
+@keyframes Float-b-umqkex6kwj {
+
+  0%,
+
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Adaptation mobile */
+
+@media (max-width: 768px) {
+  .tarif-section[b-umqkex6kwj] {
+    min-height: 60vh;
+  }
+
+  .tarif-section__content[b-umqkex6kwj] {
+    min-height: 60vh;
+    justify-content: center;
     align-items: center;
-
-    overflow-x: auto;
-
-    overflow-y: hidden;
-
-    scrollbar-width: none;
-
-    scroll-snap-type: x mandatory;
-
-    }
-
-    .tarif-Section__carousel-track[b-umqkex6kwj] {
-
-      display: flex;
-
-      flex-wrap: nowrap;
-
-      align-items: center;
-
-      justify-content: center;
-
-      gap: 1rem;
-
-      width: max-content;
-
-      overflow: visible;
-
-      padding: 0.5rem 1.5rem 0.85rem;
-
-    }
-
-    .tarif-Section__carousel-track[b-umqkex6kwj]::-webkit-scrollbar {
-
-      display: none;
-
-    }
-
-    .tarif-Section__carousel-set[b-umqkex6kwj] {
-
-    display: flex;
-    flex: 0 0 auto;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
-    }
-
-    .tarif-Section__carousel-item[b-umqkex6kwj] {
-
-    flex: 0 0 clamp(8.75rem, 18vw, 12rem);
-
-    min-width: 0;
-
-    padding: 0.35rem 1rem;
-
-    scroll-snap-align: center;
-
-    }
-
-    .tarif-Section__badge-grid[b-umqkex6kwj] {
-
-      display: none;
-
-    }
-
-    .tarif-Section__badge[b-umqkex6kwj] {
-
-      padding: 0.65rem 1rem;
-
-      border: 1px solid rgba(142, 188, 255, 0.3);
-
-      border-radius: 999px;
-
-      color: rgba(255, 255, 255, 0.85);
-
-      background: rgba(5, 9, 28, 0.48);
-
-      backdrop-filter: blur(10px);
-
-      font-size: 0.85rem;
-
-      letter-spacing: 0.12em;
-
-      text-transform: uppercase;
-
-      animation: badgeFloat-b-umqkex6kwj 4s ease-in-out infinite;
-
-    }
-
-    .tarif-Section__badge--icon[b-umqkex6kwj] {
-
-      display: inline-flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      
-      flex: 0 0 auto;
-
-      width: auto;
-
-      height: auto;
-
-      padding: 0;
-
-      border: 0;
-
-      border-radius: 0;
-
-      background: transparent;
-
-      backdrop-filter: none;
-
-      box-shadow: none;
-
-      overflow: visible;
-
-      text-transform: none;
-
-      letter-spacing: normal;
-
-      animation: none;
-
-      transition:
-        transform 180ms ease,
-        filter 180ms ease;
-
-    }
-
-    .tarif-Section__logo[b-umqkex6kwj] {
-
-      display: block;
-
-      width: auto;
-
-      height: clamp(8.5rem, 19vw, 12.5rem);
-
-      max-width: clamp(14rem, 30vw, 22rem);
-
-      object-fit: contain;
-
-      transform: none;
-
-      transition:
-        transform 180ms ease,
-        filter 180ms ease;
-
-      will-change: transform;
-
-    }
-
-    .tarif-Section__badge--icon:hover[b-umqkex6kwj],
-    .tarif-Section__badge--icon:focus-within[b-umqkex6kwj] {
-
-      transform: translateY(-4px);
-
-    }
-
-    .tarif-Section__badge--icon:hover .tarif-Section__logo[b-umqkex6kwj],
-    .tarif-Section__badge--icon:focus-within .tarif-Section__logo[b-umqkex6kwj] {
-
-      transform: scale(1.14);
-
-      filter: drop-shadow(0 0 18px rgba(135, 206, 255, 0.28));
-
-    }
-
-    /*
-
-      Animations CSS
-
-    */
-
-    @keyframes cinematicZoom-b-umqkex6kwj {
-
-      0% {
-
-        transform:
-
-          translate3d(
-
-            var(--mouse-x),
-
-            var(--mouse-y),
-
-            0
-
-          )
-
-          scale(1.03);
-
-      }
-
-      100% {
-
-        transform:
-
-          translate3d(
-
-            var(--mouse-x),
-
-            var(--mouse-y),
-
-            0
-
-          )
-
-          scale(1.09);
-
-      }
-
-    }
-
-    @keyframes luminosityPulse-b-umqkex6kwj {
-
-      0%,
-
-      100% {
-
-        filter:
-
-          saturate(1.05)
-
-          contrast(1.03)
-
-          brightness(0.9);
-
-      }
-
-      50% {
-
-        filter:
-
-          saturate(1.18)
-
-          contrast(1.08)
-
-          brightness(1.02);
-
-      }
-
-    }
-
-    @keyframes nebulaPurple-b-umqkex6kwj {
-
-      from {
-
-        transform:
-
-          translate3d(-6%, -4%, 0)
-
-          scale(0.9);
-
-      }
-
-      to {
-
-        transform:
-
-          translate3d(14%, 12%, 0)
-
-          scale(1.18);
-
-      }
-
-    }
-
-    @keyframes nebulaBlue-b-umqkex6kwj {
-
-      from {
-
-        transform:
-
-          translate3d(5%, 8%, 0)
-
-          scale(1);
-
-      }
-
-      to {
-
-        transform:
-
-          translate3d(-14%, -12%, 0)
-
-          scale(1.2);
-
-      }
-
-    }
-
-    @keyframes lightSweep-b-umqkex6kwj {
-
-      0%,
-
-      15% {
-
-        left: -35%;
-
-        opacity: 0;
-
-      }
-
-      24% {
-
-        opacity: 0.8;
-
-      }
-
-      52% {
-
-        left: 120%;
-
-        opacity: 0.55;
-
-      }
-
-      60%,
-
-      100% {
-
-        left: 120%;
-
-        opacity: 0;
-
-      }
-
-    }
-
-    @keyframes stackGlow-b-umqkex6kwj {
-
-      0%,
-
-      100% {
-
-        opacity: 0.35;
-
-        transform: scale(0.96);
-
-      }
-
-      50% {
-
-        opacity: 0.9;
-
-        transform: scale(1.08);
-
-      }
-
-    }
-
-    @keyframes noiseShift-b-umqkex6kwj {
-
-      0% {
-
-        transform: translate(0, 0);
-
-      }
-
-      25% {
-
-        transform: translate(-1%, 1%);
-
-      }
-
-      50% {
-
-        transform: translate(1%, -1%);
-
-      }
-
-      75% {
-
-        transform: translate(1%, 1%);
-
-      }
-
-      100% {
-
-        transform: translate(-1%, -1%);
-
-      }
-
-    }
-
-    @keyframes badgeFloat-b-umqkex6kwj {
-
-      0%,
-
-      100% {
-
-        transform: translateY(0);
-
-      }
-
-      50% {
-
-        transform: translateY(-8px);
-
-      }
-
-    }
-
-    /*
-
-      Adaptation mobile
-
-    */
-
-    @media (max-width: 768px) {
-
-      .tarif-Section[b-umqkex6kwj] {
-
-        min-height: 60vh;
-
-      }
-
-      .tarif-Section__content[b-umqkex6kwj] {
-
-        min-height: 60vh;
-
-        justify-content: center;
-
-        align-items: center;
-
-      }
-
-      .tarif-Section__logo[b-umqkex6kwj] {
-
-        height: clamp(7rem, 24vw, 9.5rem);
-
-        max-width: clamp(12rem, 42vw, 17rem);
-
-      }
-
-      .tarif-Section__carousel-track[b-umqkex6kwj] {
-
-        animation-duration: 18s;
-
-        padding-inline: 1rem;
-
-
-      }
-
-      .tarif-Section__image[b-umqkex6kwj] {
-
-        object-position: 59% center;
-
-      }
-
-      .stack-glow[b-umqkex6kwj] {
-
-        left: 37%;
-
-        width: 52%;
-
-      }
-
-    }
-
-    /*
-
-      Désactivation des mouvements pour les utilisateurs
-
-      ayant demandé une réduction des animations.
-
-    */
-
-    @media (prefers-reduced-motion: reduce) {
-
-      .tarif-Section__image[b-umqkex6kwj],
-
-      .nebula[b-umqkex6kwj],
-
-      .light-sweep[b-umqkex6kwj],
-
-      .stack-glow[b-umqkex6kwj],
-
-      .noise[b-umqkex6kwj],
-
-      .tarif-Section__badge[b-umqkex6kwj] {
-
-        animation: none;
-
-      }
-
-      .tarif-Section__image[b-umqkex6kwj] {
-
-        transform: scale(1.03);
-
-      }
-
-      .tarif-Section__carousel-track[b-umqkex6kwj] {
-
-        animation: none;
-
-      }
-    }
+  }
+
+  .tarif-section__logo[b-umqkex6kwj] {
+    height: clamp(7rem, 24vw, 9.5rem);
+    max-width: clamp(12rem, 42vw, 17rem);
+  }
+
+  .tarif-section__carousel-track[b-umqkex6kwj] {
+    animation-duration: 18s;
+    padding-inline: 1rem;
+  }
+
+  .tarif-section__image[b-umqkex6kwj] {
+    object-position: 59% center;
+  }
+
+  .stack-glow[b-umqkex6kwj] {
+    left: 37%;
+    width: 52%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tarif-section__image[b-umqkex6kwj],
+
+  .nebula[b-umqkex6kwj],
+
+  .light-sweep[b-umqkex6kwj],
+
+  .stack-glow[b-umqkex6kwj],
+
+  .noise[b-umqkex6kwj],
+  
+  .tarif-section__badge[b-umqkex6kwj] {
+    animation: none;
+  }
+
+  .tarif-section__image[b-umqkex6kwj] {
+    transform: scale(1.03);
+  }
+
+  .tarif-section__carousel-track[b-umqkex6kwj] {
+    animation: none;
+  }
+}

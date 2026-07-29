@@ -33,6 +33,15 @@ namespace PortfolioDigital.Web.Models
         public string? LastName => UIDataText.LastName;
 
         /// <summary>
+        /// Profile image alternative text for the admin user.
+        /// This property provides alternative text for the profile image of the admin user.
+        /// It is used for accessibility purposes, allowing screen readers to describe the image to visually impaired users.
+        /// The alternative text should accurately describe the content and purpose of the image.
+        /// </summary>
+        [BindProperty]
+        public string? ProfileImage => UIDataText.IconsPath?.Find(x => x.Item1 == "Profile")?.Item2;
+
+        /// <summary>
         /// Email address of the admin user.
         /// This property holds the email address associated with the admin user.
         /// It is used for communication purposes, such as sending notifications or password reset links.
@@ -64,6 +73,24 @@ namespace PortfolioDigital.Web.Models
         [BindProperty]
         public string? Profession => UIDataText.Profession;
 
+        /// <summary>
+        /// Gets or sets the path to the CV (Curriculum Vitae) of the admin user.
+        /// This property holds the file path or URL to the CV document associated with the admin user.
+        /// It is used to provide access to the user's CV for download or viewing purposes.
+        /// The CV path should point to a valid file location or a web address where the CV can be accessed. It is important to ensure that the CV is up-to-date and accurately represents the
+        /// </summary>
+        [BindProperty]
+        public string? CVPath => UIDataText.CVPath;
+
+        /// <summary>
+        ///     Gets or sets the path to the Enseigne icon of the admin user.
+        ///     This property holds the file path or URL to the Enseigne icon associated with the admin user.
+        ///     It is used to provide access to the user's Enseigne icon for display purposes.
+        /// </summary>
+        [BindProperty]
+        public string? EnseigneIcon => UIDataText.IconsPath?.Find(x => x.Item1 == "Company")?.Item2;
+
+        [BindProperty]
         public string? Enseigne => UIDataText.FreelanceName;
 
         /// <summary>
@@ -100,6 +127,6 @@ namespace PortfolioDigital.Web.Models
         /// It is used to retrieve the logos associated with the services offered by the admin user.
         /// The folder path should be a valid directory path on the server or a relative path within the application. It is important to ensure that the folder path is accessible and contains the necessary logo files    
         /// </summary>
-        public string[,]? ServiceLogoPathFolder => UIDataText.ServiceLogoPathFolder;
+        public string[,]? ServiceLogoPath => UIDataText.ServicesIconPath;
     }
 }

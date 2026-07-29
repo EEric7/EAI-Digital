@@ -1,3 +1,8 @@
 {
-    "dotnet.defaultSolution": "PortfolioDigital.sln"
+    "dotnet.defaultSolution": "PortfolioDigital.sln",
+    "python.testing.pytestArgs": [
+        "PortfolioDigital.Web"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.pytestEnabled": true
 }

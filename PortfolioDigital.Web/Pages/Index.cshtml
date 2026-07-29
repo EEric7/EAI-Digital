@@ -3,21 +3,18 @@
 @model IndexModel
 
 @{
-    var home = Model.IndexHomeModel;
-    var user = home?.UserModel;
-    var skills = home?.SkillsModelDisplay?.ToList() ?? new();
-    var projects = home?.ProjectModelDisplay?.ToList() ?? new();
+    Models.IndexHomeModel? home = Model.IndexHomeModel;
 }
 
-@await Html.PartialAsync("_IndexNav", home?.MenuModel)
+@await Html.PartialAsync("_IndexNav", home)
 
 <!--Master Head-->
 <header class="masthead">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
         <div class="d-flex justify-content-center">
             <div class="text-center">
-                <h1 class="mx-auto my-0 text-uppercase">@user?.UserName</h1>
-                <h2 class="text-white-50 mx-auto mt-2 mb-5">@user?.Profession</h2>
+                <h1 class="mx-auto my-0 text-uppercase">@home?.UserModel?.UserName</h1>
+                <h2 class="text-white-50 mx-auto mt-2 mb-5">@home?.UserModel?.Profession</h2>
                 <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
                     <a class="btn btn-primary" href="#about">@UIText.WhoAmIButton</a>
                 </div>
@@ -27,25 +24,20 @@
 </header>
 
 <!-- Services-->
-@await Html.PartialAsync("_ServiceSection", user)
+@await Html.PartialAsync("_ServiceSection", home)
 
 <!-- Tarifs-->
-@await Html.PartialAsync("_TarifSection", user)
+@await Html.PartialAsync("_TarifSection", home)
 
 <!--About-->
 @await Html.PartialAsync("_AboutSection", home)
 
-<!-- Credit-->
-@* @await Html.PartialAsync("_CreditSection") *@
-
 <!-- Contact-->
 @await Html.PartialAsync("_ContactSection", home)
 
-@* @await Html.PartialAsync("_TarifCard") *@
-
 <footer class="bg-dark font-f footer text-muted align-items-center justify-content-center">
     <div class="container px-4 px-lg-5 d-flex h-100 align-items-center justify-content-center">
-        &copy; 2024 - EAI Digital - <a asp-area="" asp-page="/Privacy">Portfolio</a>
+        &copy; 2026 - <a>@home?.UserModel?.Enseigne</a>
     </div>
 </footer>
 

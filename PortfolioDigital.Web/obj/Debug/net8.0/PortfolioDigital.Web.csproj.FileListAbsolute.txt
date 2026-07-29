@@ -1,3 +1,12 @@
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web
+/Volumes/Workspace/EAI-Digital/publish/Properties/appsettings.Development.json
+/Volumes/Workspace/EAI-Digital/publish/Properties/appsettings.Production.json
+/Volumes/Workspace/EAI-Digital/publish/Properties/appsettings.Staging.json
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.staticwebassets.runtime.json
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.deps.json
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.runtimeconfig.json
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.dll
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.pdb
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/Properties/appsettings.Development.json
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/Properties/appsettings.Production.json
 /Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/bin/Debug/net8.0/Properties/appsettings.Staging.json

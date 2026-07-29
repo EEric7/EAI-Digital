@@ -6,24 +6,31 @@ namespace PortfolioDigital.Web.Models
     public class IndexHomeModel
     {
         [BindProperty]
-        public List<Tuple<string, string>> MenuModel { get; set; } = Enumerable.Range(0, UIDataText.MenuItems.GetLength(0))
-            .Select(i => new Tuple<string, string>(UIDataText.MenuItems[i, 0], UIDataText.MenuItems[i, 1]))
-            .ToList();
+        public List<(string Name, string Path)>? MenuModel { get; private set; }
 
         [BindProperty]
-        public UserModel? UserModel { get; set; } = new UserModel();
+        public UserModel? UserModel { get; private set; }
 
         [BindProperty]
-        public string[] IconsContactPath { get; set; } = UIDataText.IconsContactPath;
+        public List<(string Name, string Path)>? IconsPath { get; private set; }
 
         [BindProperty]
-        public List<SkillModel> SkillsModelDisplay { get; set; } = new List<SkillModel>();
+        public string[,]? ServiceIconPath { get; private set; }
 
         [BindProperty]
-        public List<ProjectModel> ProjectModelDisplay { get; set; } = new List<ProjectModel>();
+        public List<SkillModel>? SkillsModelDisplay { get;private set; }
+
+        [BindProperty]
+        public List<ProjectModel>? ProjectModelDisplay { get;private set; }
 
         public IndexHomeModel()
         {
+            UserModel = new UserModel();
+            MenuModel = UIText.MenuItems.Select(x => (x.Item1, x.Item2)).ToList();
+            IconsPath = UIDataText.IconsPath?.Select(x => (x.Item1, x.Item2)).ToList();
+            ServiceIconPath = UIDataText.ServicesIconPath;
+
+            SkillsModelDisplay = new List<SkillModel>();
             for (int i = 0; i < UIDataText.SkillLevels.GetLength(0); i++)
             {
                 SkillsModelDisplay.Add(new SkillModel
@@ -34,6 +41,7 @@ namespace PortfolioDigital.Web.Models
                 });
             }
 
+            ProjectModelDisplay = new List<ProjectModel>();
             for (int i = 0; i < UIDataText.ProjectInformation.GetLength(0); i++)
             {
                 ProjectModelDisplay.Add(new ProjectModel

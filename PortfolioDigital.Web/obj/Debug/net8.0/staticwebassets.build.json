@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "60MyQWlWLBvfteckFZFd3h94gN0ALf4CXsz+2JelxJM=",
+  "Hash": "d3NuKROwA8wgkO3OKweg+Ae2f+ElcqIQWlL5KTbfMl8=",
   "Source": "PortfolioDigital.Web",
   "BasePath": "_content/PortfolioDigital.Web",
   "Mode": "Default",
@@ -167,6 +167,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/assets/img/Dev-logo.png"
+    },
+    {
+      "Identity": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/EAID.png",
+      "SourceId": "PortfolioDigital.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/",
+      "BasePath": "_content/PortfolioDigital.Web",
+      "RelativePath": "assets/img/EAID.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/assets/img/EAID.png"
     },
     {
       "Identity": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/ErrorPage.jpg",

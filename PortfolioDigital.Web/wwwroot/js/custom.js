@@ -2,11 +2,23 @@
 
       "use strict";
 
-      const banner = document.getElementById("techBanner");
-
       const canvas = document.getElementById("particleCanvas");
 
+      if (!canvas) {
+
+        return;
+
+      }
+
+      const banner = canvas.closest(".tarif-section");
+
       const context = canvas.getContext("2d");
+
+      if (!banner || !context) {
+
+        return;
+
+      }
 
       const reducedMotion = window.matchMedia(
 
@@ -87,6 +99,12 @@
         );
 
         createParticles();
+
+        if (reducedMotion) {
+
+          drawParticles(0);
+
+        }
 
       }
 

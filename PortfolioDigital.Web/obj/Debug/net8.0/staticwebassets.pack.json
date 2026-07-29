@@ -33,6 +33,10 @@
       "PackagePath": "staticwebassets/assets/img/Dev-logo.png"
     },
     {
+      "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/EAID.png",
+      "PackagePath": "staticwebassets/assets/img/EAID.png"
+    },
+    {
       "Id": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/wwwroot/assets/img/ErrorPage.jpg",
       "PackagePath": "staticwebassets/assets/img/ErrorPage.jpg"
     },

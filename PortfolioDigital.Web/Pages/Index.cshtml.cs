@@ -15,7 +15,7 @@ public class IndexModel : PageModel
 
     // Model for the Accueil page
     [BindProperty]
-    public IndexHomeModel IndexHomeModel { get; set; } = new IndexHomeModel();
+    public IndexHomeModel? IndexHomeModel { get; private set; } = new IndexHomeModel();
 
     public void OnGet() {}
 }

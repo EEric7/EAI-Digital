@@ -2,6 +2,14 @@ namespace PortfolioDigital.Web.Models.Commun
 {
     public static class UIText
     {
+        public static readonly List<(string Name, string Path)> MenuItems = new List<(string Name, string Path)>
+        {
+            new ("Services", "#services"),
+            new ("Tarifs", "#tarifs"),
+            new ("About", "#about"),
+            new ("Contacts", "#contacts")
+        };
+        
         //Homepage dashboard
         public const string HomePageTitle = "Bienvenue sur mon portfolio";
 
@@ -18,6 +26,7 @@ namespace PortfolioDigital.Web.Models.Commun
 
         public const string AboutSubtitle = "Mes expériences professionnelles.";
         public const string ServicesTitle = "MES SERVICES";
+        public const string TarifTitle = "Prestations et Tarifs";
         public const string ServicesSubtitle = "Transformez vos idées en solutions digitales.";
         public const string TarifSloganHeader = "L’expertise logicielle au service de votre croissance.";
 

@@ -1,24 +1,24 @@
 @using PortfolioDigital.Web.Models.Commun
-<section class="services-showcase py-5" id="services">
-    <div class="container-fluid services-container px-3 px-lg-5">
+<section class="service-section py-5" id="services">
+    <div class="container-fluid service-section__container px-3 px-lg-5">
 		<div class="text-center mb-5">
-			<h2 class="services-title mb-2">@UIText.ServicesTitle</h2>
-			<p class="services-subtitle mb-3">@UIText.ServicesSubtitle</p>
-			<span class="services-divider" aria-hidden="true"></span>
+			<h2 class="service-section__title mb-2">@UIText.ServicesTitle</h2>
+			<p class="service-section__subtitle mb-3">@UIText.ServicesSubtitle</p>
+			<span class="service-section__divider" aria-hidden="true"></span>
 		</div>
 
 		<div class="container px-4 px-lg-5">
             <div class="row gx-0 mb-4 mb-lg-5 align-items-center">
                 <div class="col-lg-4">
-                    @for (int index = 0; index < Model.Prestations.GetLength(0); index++)
+                    @for (int index = 0; index < Model.UserModel.Prestations.GetLength(0); index++)
                     {
                         var isEven = index % 2 == 0;
                         @if(isEven)
                         {
-                            <div class="service-line service-line-left">
-                                <div class="service-copy text-lg-end text-center">
-                                    <h3>@Model.Prestations[index, 0]</h3>
-                                    <p>@Model.Prestations[index, 2]</p>
+                            <div class="service-section__item service-section__item--left">
+                                <div class="service-section__copy text-lg-end text-center">
+                                    <h3>@Model.UserModel.Prestations[index, 0]</h3>
+                                    <p>@Model.UserModel.Prestations[index, 2]</p>
                                 </div>
                             </div>
                         }
@@ -26,23 +26,25 @@
                 </div>
 
                 <div class="col-lg-4">
-                    <div class="services-center-visual">
-                        <div class="services-phone">
-                            <div class="services-phone-slider" data-services-slider>
-                                <div class="services-phone-track">
-                                    @for (int index = 0; index < Model.Prestations.GetLength(0); index++)
+                    <div class="service-section__visual">
+                        <div class="service-section__carousel">
+                            <div class="service-section__slider" data-services-slider>
+                                <div class="service-section__track">
+                                    @for (int index = 0; index < Model.UserModel.Prestations.GetLength(0); index++)
                                     {
-                                        var slideClass = index == 0 ? "services-phone-slide is-active" : "services-phone-slide";
+                                        var slideClass = index == 0
+                                            ? "service-section__slide is-active"
+                                            : "service-section__slide";
                                         <article class="@slideClass" data-service-slide>
-                                            <h4>@Model.Prestations[index, 0]</h4>
-                                            <p>@Model.Prestations[index, 1]</p>
+                                            <h4>@Model.UserModel.Prestations[index, 0]</h4>
+                                            <p>@Model.UserModel.Prestations[index, 1]</p>
                                         </article>
                                     }
                                 </div>
-                                <div class="services-phone-controls">
-                                    <button class="services-phone-nav" type="button" data-service-prev aria-label="Prestation precedente">&#10094;</button>
-                                    <div class="services-phone-dots" data-service-dots aria-hidden="true"></div>
-                                    <button class="services-phone-nav" type="button" data-service-next aria-label="Prestation suivante">&#10095;</button>
+                                <div class="service-section__controls">
+                                    <button class="service-section__nav" type="button" data-service-prev aria-label="Prestation precedente">&#10094;</button>
+                                    <div class="service-section__dots" data-service-dots aria-hidden="true"></div>
+                                    <button class="service-section__nav" type="button" data-service-next aria-label="Prestation suivante">&#10095;</button>
                                 </div>
                             </div>
                         </div>
@@ -50,15 +52,15 @@
                 </div>
 
                 <div class="col-lg-4">
-                    @for (int index = 0; index < Model.Prestations.GetLength(0); index++)
+                    @for (int index = 0; index < Model.UserModel.Prestations.GetLength(0); index++)
                     {
                         var isOdd = index % 2 == 1;
                         @if(isOdd)
                         {
-                            <div class="service-line service-line-right">
-                                <div class="service-copy text-lg-start text-center">
-                                    <h3>@Model.Prestations[index, 0]</h3>
-                                    <p>@Model.Prestations[index, 2]</p>
+                            <div class="service-section__item service-section__item--right">
+                                <div class="service-section__copy text-lg-start text-center">
+                                    <h3>@Model.UserModel.Prestations[index, 0]</h3>
+                                    <p>@Model.UserModel.Prestations[index, 2]</p>
                                 </div>
                             </div>
                         }

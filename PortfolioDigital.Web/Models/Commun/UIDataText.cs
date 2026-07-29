@@ -5,34 +5,43 @@ namespace PortfolioDigital.Web.Models.Commun
     public static class UIDataText
     {
         // Homepage resscources
-        public const string ProfileImageAlt = "assets/img/Moi.png";
-        public const string CVImageAlt = "assets/ico/cv.ico";
-
-        public static readonly string[] IconsContactPath = new string[]
+        public static readonly List<Tuple<string, string>>? IconsPath = new List<Tuple<string, string>>
         {
-            "~/assets/img/IconMap.png",
-            "~/assets/img/IconMsg.png",
-            "~/assets/img/IconTel.png",
-            "~/assets/img/github-logo.png"
+            new Tuple<string, string>("Map", "~/assets/img/IconMap.png"),
+            new Tuple<string, string>("Message", "~/assets/img/IconMsg.png"),
+            new Tuple<string, string>("Phone", "~/assets/img/IconTel.png"),
+            new Tuple<string, string>("Profile", "~/assets/img/Moi.png"),
+            new Tuple<string, string>("Company", "~/assets/img/EAID.png"),
+            new Tuple<string, string>("GitHub", "~/assets/img/github-logo.png")
+        };
+
+        public static readonly string[,]? ServicesIconPath = new string[4,3]
+        {
+            { "Formule Sur-Mesure","~/assets/img/Dev-logo.png", "3000€"},
+            { "Formule BDD","~/assets/img/Bdd-logo.png", "1800€"},
+            { "Formule Cloud","~/assets/img/Cld-logo.png", "1299€" },
+            { "Formule Maintenance","~/assets/img/Tools-logo.png", "400€ /AN" }
         };
 
         // User Information
         public const string FirstName = "Eric";
         public const string LastName = "ELEMBA ADI";
-        public const string Email = "elembaadi@icloud.com";
+        public const string Email = "Contact@eai-digital.net";
         public const string Description = @"Développeur .NET passionné et polyvalent avec plus de 5 ans d’expérience professionnelle et académique dans le développement de solutions innovantes.\r\n 
                             Certifié Manager en systèmes d’information, développeur analyste développeur, j’ai construit ma carrière sur des bases solides en programmation, gestion de projets et migration vers le cloud.\r\n
                             Je maîtrise des technologies telles que C#, SQL, HTML5/CSS3 et des frameworks comme ASP.NET Core,MVC et Blazor, en intégrant des bases de données complexes grâce à SQL Server et des outils comme Entity Framework.\r\n
                             Mon expertise s’étend également aux méthodes Agiles, aux principes SOLID et aux design patterns.";
         public const string Profession = "Développeur .NET";
-        public const string Address = "25 rue des Carmes, 67100 Strasbourg, France";
+
+        public const string CVPath = "~/assets/CV.NET.pdf";
+        public const string Address = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84483.97839345546!2d7.679498445287583!3d48.56916757521499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0x971a483118e7241f!2sStrasbourg!5e0!3m2!1sfr!2sfr!4v1784998124008!5m2!1sfr!2sfr";
         public const string PhoneNumber = "None";
-        public const string GitHubUrl = "https://github.com/EEric7";
+        public const string GitHubUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84483.97839345546!2d7.679498445287583!3d48.56916757521499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0x971a483118e7241f!2sStrasbourg!5e0!3m2!1sfr!2sfr!4v1784998124008!5m2!1sfr!2sfr";
         public const string FreelanceName = "EAI Digital";
         public const bool Available = true;
 
         // Skill Information
-        public static readonly string[,] SkillLevels = new string[11, 3]
+        public static readonly string[,] SkillLevels = new string[12, 3]
         {
             { "C#", "Advanced", "Language" },
             { ".NET Core", "Advanced", "Framework" },
@@ -44,6 +53,7 @@ namespace PortfolioDigital.Web.Models.Commun
             { "Testing & Debugging", "Intermediate", "Design" },
             { "SOLID Principales", "Advanced", "Design" },
             { "HTML5/CSS3", "Advanced", "Language" },
+            { "Bootstrap", "Advanced", "Design" },
             { "Git", "Advanced", "Version Control" }
         };
 
@@ -85,7 +95,7 @@ namespace PortfolioDigital.Web.Models.Commun
             }
         };
 
-        public static readonly IList<string[]> ProjectsMissions = new List<string[]>
+        public static readonly List<string[]> ProjectsMissions = new List<string[]>
         {
             new string[]
             {
@@ -117,22 +127,6 @@ namespace PortfolioDigital.Web.Models.Commun
                 "Évolution et optimisation des performances après migration.",
                 "Maintenance et évolution et correction de la plateforme."
             }
-        };
-
-        public static readonly string[,] ServiceLogoPathFolder = new string[2,3]
-        {
-            { "~/assets/img/Dev-logo.png", "Formule Sur-Mesure" , "3000€"},
-            //{ "~/assets/img/Bdd-logo.png", " Formule BDD" , "1800€"},
-            //{ "~/assets/img/Cld-logo.png", "Formule Cloud", "1299€" },
-            { "~/assets/img/Tools-logo.png", "Formule Maintenance", "400€ /AN" }
-        };
-
-        public static readonly string[,] MenuItems = new string[4, 2]
-        {
-            { "Services", "#services" },
-            { "Tarifs", "#tarifs" },
-            { "About", "#about" },
-            { "Contacts", "#contacts" }
         };
 
         public static readonly string [,] Prestations = new string[4, 3]
