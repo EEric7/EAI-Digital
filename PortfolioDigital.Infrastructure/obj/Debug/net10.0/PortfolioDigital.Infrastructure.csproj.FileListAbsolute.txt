@@ -1,0 +1,6 @@
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Infrastructure/obj/Debug/net10.0/PortfolioDigital.Infrastructure.csproj.AssemblyReference.cache
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Infrastructure/obj/Debug/net10.0/PortfolioDigital.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Infrastructure/obj/Debug/net10.0/PortfolioDigital.Infrastructure.AssemblyInfoInputs.cache
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Infrastructure/obj/Debug/net10.0/PortfolioDigital.Infrastructure.AssemblyInfo.cs
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Infrastructure/obj/Debug/net10.0/PortfolioDigital.Infrastructure.csproj.CoreCompileInputs.cache
+/Volumes/Workspace/EAI-Digital/PortfolioDigital.Infrastructure/obj/Debug/net10.0/PortfolioDigital.Infrastructure.sourcelink.json

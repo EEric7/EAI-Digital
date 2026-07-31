@@ -34,7 +34,7 @@ namespace PortfolioDigital.Web.Models.Commun
         public const string Profession = "Développeur .NET";
 
         public const string CVPath = "~/assets/CV.NET.pdf";
-        public const string Address = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84483.97839345546!2d7.679498445287583!3d48.56916757521499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0x971a483118e7241f!2sStrasbourg!5e0!3m2!1sfr!2sfr!4v1784998124008!5m2!1sfr!2sfr";
+        public const string Address = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84484.16796970097!2d7.679670459064138!3d48.569054104338896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0x971a483118e7241f!2sStrasbourg!5e0!3m2!1sfr!2sfr!4v1785414379640!5m2!1sfr!2sfr";
         public const string PhoneNumber = "None";
         public const string GitHubUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d84483.97839345546!2d7.679498445287583!3d48.56916757521499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4796c8495e18b2c1%3A0x971a483118e7241f!2sStrasbourg!5e0!3m2!1sfr!2sfr!4v1784998124008!5m2!1sfr!2sfr";
         public const string FreelanceName = "EAI Digital";

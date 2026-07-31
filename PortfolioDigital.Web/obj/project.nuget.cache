@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "IGhEicVzCiE=",
+  "dgSpecHash": "mdOdOc9xrXE=",
   "success": true,
   "projectFilePath": "/Volumes/Workspace/EAI-Digital/PortfolioDigital.Web/PortfolioDigital.Web.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/Eric/.nuget/packages/microsoft.netcore.app.ref/8.0.29/microsoft.netcore.app.ref.8.0.29.nupkg.sha512",
+    "/Users/Eric/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.29/microsoft.aspnetcore.app.ref.8.0.29.nupkg.sha512",
+    "/Users/Eric/.nuget/packages/microsoft.netcore.app.host.osx-arm64/8.0.29/microsoft.netcore.app.host.osx-arm64.8.0.29.nupkg.sha512"
+  ],
   "logs": []
 }

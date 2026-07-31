@@ -1,0 +1,5 @@
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.dll
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.deps.json
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.runtimeconfig.json
+/Volumes/Workspace/EAI-Digital/publish/PortfolioDigital.Web.pdb
